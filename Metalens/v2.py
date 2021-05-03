@@ -20,31 +20,14 @@ e = er + ei * 1j
 A = np.abs(e)
 P = np.angle(e)*180/np.pi
 
-if "TALL" in variables:
-    TALL = variables["TALL"]
-    TALL_set = np.sort(np.unique(TALL))
-
-    max_gaps = []
-
-    for tall in TALL_set:
-        mask = TALL == tall
-        p = np.sort(P[mask])
-        print(p)
-        p2 = np.roll(p, -1)
-        max_gap = np.max((p2-p) % 360)
-        max_gaps.append(max_gap)
-
-    plt.scatter(TALL, P, A, "red")
-    plt.plot(TALL_set, max_gaps)
-    plt.ylabel("phase distribution")
-    plt.xlabel("height")
-    plt.show()
-
 plt.xlabel("W")
 plt.ylabel("H")
 plt.scatter(W, H, s=50, c=A)
 plt.quiver(W, H, np.cos(P/180*np.pi), np.sin(P/180*np.pi))
 plt.show()
+
+
+
 
 # FIND AND PLACE AND BUILD----------------------------------------------
 
