@@ -15,6 +15,7 @@ cad_aspectratio = 1
 delta = index-background_index
 dimension = 3
 domain_max = CEILING
+domain_min = -0.1
 eim = 0
 fdtd_display_res_auto = DISPLAY_RES_AUTO
 fdtd_field_output = 1
@@ -25,13 +26,13 @@ fdtd_pml_cells_enable = 1
 fdtd_stop_auto = 1
 fdtd_stop_time = 85.65
 fdtd_stop_time_auto = 1
-fdtd_time_step = 0.0125
+fdtd_time_step = 0.0171875
 fdtd_time_step_auto = 1
 fdtd_update_time = 5*lambda/4
 fdtd_update_time_auto = DISPLAY_TIME_MEDIUM
 free_space_wavelength = 0.55
-grid_size = 0.02
-grid_size_y = 0.02
+grid_size = 0.03
+grid_size_y = 0.03
 height = 21
 index = 2
 k0 = (2*pi)/free_space_wavelength
@@ -39,6 +40,7 @@ lambda = free_space_wavelength
 launch_align_file = 1
 launch_angle = 0
 launch_height = inf
+launch_position_z = 0
 launch_theta = 0
 launch_tilt = 1
 launch_type = LAUNCH_PLANEWAVE
@@ -6661,6 +6663,20 @@ segment 442
 	end.width = 0.3230769231
 end segment
 
+time_monitor 443
+	profile_type = PROF_INACTIVE
+	color = 2
+	type = TIMEMON_EXTENDED
+	timeaverage = 2
+	complexmonitor = 1
+	monitoroutputmask = 0
+	fieldoutputmask = 1
+	fieldoutputformat = OUTPUT_AMP_PHASE
+	frequencyanalysis = TIMEMON_FA_DFT
+	begin.x = 0
+	begin.z = 1.9
+end time_monitor
+
 
 
 
@@ -6671,6 +6687,7 @@ launch_field 1
 	launch_align_file = 1
 	launch_angle = 0
 	launch_theta = 0
+	launch_position_z = 0
 end launch_field
 
 

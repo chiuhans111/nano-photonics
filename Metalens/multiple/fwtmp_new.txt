@@ -1,0 +1,2 @@
+Monitor Results:
+	Mon#1 |Ex| =  1.923816E+00
