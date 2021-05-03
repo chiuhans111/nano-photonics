@@ -1,0 +1,120 @@
+
+H = 0.2
+W = 0.5
+alpha = 0
+background_index = 1
+boundary_max = width/2
+boundary_max_y = width/2
+boundary_min = -width/2
+boundary_min_y = -width/2
+cad_aspectratio = 1
+delta = index-background_index
+dimension = 3
+domain_max = 3
+eim = 0
+fdtd_display_res_auto = DISPLAY_RES_AUTO
+fdtd_monitor_time = lambda/4
+fdtd_monitor_time_auto = MONITOR_TIME_AUTO
+fdtd_pml_cells_enable = 1
+fdtd_stop_auto = 1
+fdtd_stop_time = 3.85
+fdtd_stop_time_auto = 1
+fdtd_time_step = 0.0275
+fdtd_time_step_auto = 1
+fdtd_update_time = 9*lambda/4
+fdtd_update_time_auto = DISPLAY_TIME_AUTO
+free_space_wavelength = 0.55
+height = width
+index = 2
+k0 = (2*pi)/free_space_wavelength
+lambda = free_space_wavelength
+launch_align_file = 1
+launch_tilt = 1
+rcwa_harmonics_x = 5
+rcwa_harmonics_y = 5
+sim_tool = ST_DIFFRACTMOD
+structure = STRUCT_CHANNEL
+width = 1
+
+
+segment 1
+	extended = 1
+	begin.x = 0
+	begin.z = 0
+	begin.height = height*H
+	begin.width = width*W
+	end.x = 0 rel begin segment 1
+	end.y = 0 rel begin segment 1
+	end.z = 0.8 rel begin segment 1
+	end.height = height*H
+	end.width = width*W
+end segment
+
+time_monitor 2
+	profile_type = PROF_INACTIVE
+	color = 2
+	type = TIMEMON_FIELD
+	timeaverage = 2
+	monitoroutputformat = OUTPUT_REAL_IMAG
+	begin.x = 0
+	begin.z = 3
+end time_monitor
+
+
+
+
+launch_field 1
+	launch_pathway = 0
+	launch_type = LAUNCH_WGMODE
+	launch_tilt = 1
+	launch_align_file = 1
+end launch_field
+
+
+text_block 1
+	name = MOST
+	text =
+RSScanOptFormat1
+
+[MODE] 
+SCAN
+
+PREFIX mosttmp
+PREFIX_STYLE 0
+CLUSTER 0 0 0 0 1 ""
+USERSIM_CALLSTYLE 1936876915 151010304
+
+[SIMULATION]
+SIMTOOL ST_DEFAULT 
+WINDOW_SIZE 0
+VERBOSITY 0
+PRE_WHOLE_CMD 
+POST_WHOLE_CMD 
+PRE_CMD 
+POST_CMD 
+PREPOST_ACTIVE 0
+PREPOST_ERRCODES 0
+EXTRA_DATAINDEX_CMDS 
+
+[ALGORITHM]
+NAME root_1d_brent
+MAXSTEPS DEFAULT  1000
+CONVERGENCE DEFAULT  1.0e-7
+
+[INDEPENDENT_VARIABLES_SCAN]
+IV_Declarations
+SYMTAB_SCALAR H Y :  IV_MULTIVAR :  :  :  :  : search_range.txt :  :
+
+[INDEPENDENT_VARIABLES_OPT]
+IV_Declarations
+
+IV_InitialValues
+
+[MEASUREMENTS:ST_DIFFRACTMOD]
+STANDARD dm_m2_ex Y 
+
+[METRICS]
+
+	end text
+end text_block
+
