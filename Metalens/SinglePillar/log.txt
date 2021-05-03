@@ -1,2 +1,0 @@
-Message: NZ=151, NX=201, NY=201, Estimated Time = 0.048 min
-Message: Nonuniform NX=200 NY=200

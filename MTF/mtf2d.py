@@ -107,12 +107,12 @@ def circle(x, y, radius):
 # BASIC PARAMETERS
 # -----------------------------------------------------------------------------
 
-resolution = 864
+resolution = 701
 mon_resolution = 64
 
-lens_radius = 6.4725
-focal_length = 31.4
-mon_radius = 30
+lens_radius = 10.5
+focal_length = 10
+mon_radius = 10
 wavelength = 0.55
 
 
@@ -141,14 +141,16 @@ ideallens_field = ideal_lens(in_coord, [[[0, 0, focal_length]]], wavelength)
 ideallens_field = ideallens_field * aperture(in_coord, lens_radius)
 
 
-metalens_field = phasemask.get("./MTF/Real_Phase_Mask_NA_0p3_m3_f2_ey.dat")
+metalens_field = phasemask.get("./fwtmp_m443_f2_ex.dat")
 metalens_field = tf.cast(metalens_field, tf.dtypes.complex64)
 
+plt.imshow(np.angle(metalens_field))
+plt.show()
 # START SIMULATE
 
 
 lens_field = metalens_field
-lens_name = "ideal_na03"
+lens_name = "meta_me"
 
 
 xz_result = propagation(in_coord, lens_field, xz_coord, wavelength)
@@ -248,7 +250,7 @@ plt.tight_layout()
 plt.show()
 
 
-mtfint = interpolate.interp2d(fx[0, :], fy[:, 0], tf.abs(mtf), kind='linear')
+mtfint = interpolate.interp2d(fx[0, :], fy[:, 0], tf.abs(mtf), kind='cubic')
 
 plt.figure(f"{lens_name}_MTF_slice")
 plt.plot([0, cutoff_frequency], [1, 0], '--',

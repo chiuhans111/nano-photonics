@@ -28,5 +28,5 @@ print(len(W))
 if input("write file?") != 'y':
     exit()
 
-mostmvwrite("./search_range.txt",
+mostmvwrite("./single/search_range.txt",
             ["W", "H"], W, H)

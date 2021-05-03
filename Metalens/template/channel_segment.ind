@@ -1,0 +1,14 @@
+segment {id}
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = {x}
+	begin.y = {y}
+	begin.z = {z}
+	begin.height = {h}
+	begin.width = {w}
+	end.x = 0 rel begin segment {id}
+	end.y = 0 rel begin segment {id}
+	end.z = {tall} rel begin segment {id}
+	end.height = {h}
+	end.width = {w}
+end segment

@@ -1,0 +1,3 @@
+
+Monitor Results:
+	Mon#2 real(Ex) =  1.331194E-01, imag(Ex) = 0.563103

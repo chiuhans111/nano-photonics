@@ -1,0 +1,2 @@
+#This file is generated automatically.  Do not attempt to edit it!
+ft=1015 ext=.dat fname=fwtmp_m443_f??_ex.dat cols=[Y+] xnames=['X','Y'] wnames=['DFT[ex]'] header=[skip,skip,data=XGRID:ZPOS:FORMAT,data=YGRID] mon_num=1 cad_index=443 mon_type=2 mon_label=m443 fgrid=1.8181818,1.8181818,1 labelbyindex=0 datext=.dat

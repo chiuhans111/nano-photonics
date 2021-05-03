@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def get(file_path):
+def read(file_path):
     with open(file_path) as f:
         lines = f.readlines()
         result = []
@@ -9,11 +9,22 @@ def get(file_path):
             value = [v.strip() for v in line.split(' ')]
             result.append([float(v) for v in value if len(v) > 0])
     result = np.array(result)
-    amplitude = result[:, ::2]
-    phase = result[:, 1::2]/180*np.pi
+    a = result[:, ::2]
+    b = result[:, 1::2]
 
+    return a, b
+
+
+def get(file_path):
+    amplitude, phase = read(file_path)
+    phase = phase/180*np.pi
     metalens_field = np.exp(-phase*1j) * amplitude
     return metalens_field
+
+
+def get_im(file_path):
+    real, imag = read(file_path)
+    return real-1j*imag
 
 
 if __name__ == "__main__":

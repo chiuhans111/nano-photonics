@@ -1,0 +1,7 @@
+!/xl"Frequency (Hz)" /sx2.99792458e14
+/xl"Frequency (f/c, &mm^{-1})"
+/yl"Monitor Value (a.u.)"
+/l/lh"Monitor Label,\nType, Location:\n"
+/ls1
+metalens_m443_ex.dmn /st /powy2 /lt"Mon\#443\nEx^2, (0,0,2)"
+metalens.smn /powy2 /lt"Source"

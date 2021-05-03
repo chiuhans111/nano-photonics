@@ -1,0 +1,142 @@
+SEE 0
+LEN NEW
+GBL NUM ^CV_BACKEND_STARTUP_SEQUENCE; ^CV_BACKEND_STARTUP_SEQUENCE == 1
+RES "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+VIE; CAN;
+VIE
+GO
+VIE
+GO
+INT S1 L'' ; ISF S1 L'' 1; INX S1 L'' 0; INY S1 L'' 0; IRO S1 L'' 0; IMI S1 L'' NO
+INT S2 L'' "E:\Documents\Github\nano-photonics\MTF\interferogram.int"; INR S2 L'' 0.01699; ISF S2 L'' 1; INX S2 L'' 0; INY S2 L'' 0; IRO S2 L'' 0; IMI S2 L'' NO
+VIE
+GO
+INT S2 L'' "E:\Documents\Github\nano-photonics\MTF\interferogram.int"; INR S2 L'' 0.01699; ISF S2 L'' -1; INX S2 L'' 0; INY S2 L'' 0; IRO S2 L'' 0; IMI S2 L'' NO
+VIE
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 151
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 151
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 151
+GO
+MTF
+CHT FRE  Y
+GO
+INT S2 L'' "E:\Documents\Github\nano-photonics\MTF\interferogram.int"; INR S2 L'' 0.01699; ISF S2 L'' 1; INX S2 L'' 0; INY S2 L'' 0; IRO S2 L'' 0; IMI S2 L'' NO
+MTF
+CHT FRE  Y
+GO
+RIM
+WFR  No
+GO
+DEL S1
+RIM
+WFR  No
+GO
+MTF
+CHT FRE  Y
+GO
+VIE
+GO
+VIE
+GO
+VIE; CAN;
+VIE
+SSI  0
+RAT DEF;GRD REC 1 51
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 51
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 51
+GO
+MTF
+CHT FRE  Y
+GO
+SAV "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+MTF; CAN;
+MTF
+NRD  200
+CHT FRE  Y
+GEO NO
+GO
+MTF
+NRD  200
+CHT FRE  Y
+GEO NO
+GO
+MTF; CAN;
+MTF
+NRD  500
+CHT FRE  Y
+GEO NO
+GO
+MTF; CAN;
+MTF
+NRD  1000
+CHT FRE  Y
+GEO NO
+GO
+MTF
+NRD  1000
+CHT FRE  Y
+GEO NO
+GO
+VIE; CAN;
+VIE
+SSI  0
+RAT DEF;GRD REC 1 101
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 101
+GO
+SAV "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+VIE; CAN;
+VIE
+SSI  0
+RAT DEF;GRD REC 1 501
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 501
+GO
+SAV "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+PSF; CAN;
+PSF
+GO
+SAV "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+INT S1 L'' "E:\Documents\Github\nano-photonics\MTF\metalens.int"; INR S1 L'' 0.01699; ISF S1 L'' 1; INX S1 L'' 0; INY S1 L'' 0; IRO S1 L'' 0; IMI S1 L'' NO
+INT S1 L'' ; ISF S1 L'' 1; INX S1 L'' 0; INY S1 L'' 0; IRO S1 L'' 0; IMI S1 L'' NO
+INT S1 L'' ; ISF S1 L'' 1; INX S1 L'' 0; INY S1 L'' 0; IRO S1 L'' 0; IMI S1 L'' NO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 501
+GO
+VIE
+SSI  0
+RAT DEF;GRD REC 1 51
+GO
+PSF
+GO
+MTF
+NRD  1000
+CHT FRE  Y
+GEO NO
+GO
+RIM
+WFR  No
+GO
+SAV "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+SAV "E:\Documents\Github\nano-photonics\MTF\metalens_mtf.len"
+EXI Y

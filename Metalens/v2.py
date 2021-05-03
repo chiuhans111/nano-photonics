@@ -2,12 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from most_read import get_variable, get_result
-from slabwaveguide import neff_of_channel
 from utils import angle_average
 
-
 variables = get_variable("./single/search_range.txt")
-results = get_result("./single/mosttmp_work")["mosttmp_dm_m3_ex"]
+results = get_result("./single/mosttmp_work")["mosttmp_dm_m2_ex"]
 
 print(variables)
 print(results.shape)
@@ -16,8 +14,11 @@ W = variables["W"]
 H = variables["H"]
 
 # PERIOD = variables["PERIOD"]
-A = results[:, 0]
-P = results[:, 1]
+er = results[:, 0]
+ei = results[:, 1]
+e = er + ei * 1j
+A = np.abs(e)
+P = np.angle(e)*180/np.pi
 
 if "TALL" in variables:
     TALL = variables["TALL"]
@@ -45,41 +46,19 @@ plt.scatter(W, H, s=50, c=A)
 plt.quiver(W, H, np.cos(P/180*np.pi), np.sin(P/180*np.pi))
 plt.show()
 
-
-# Effective Index Approximate --------------------------------------------
-
-neffs = []
-for i in range(W.shape[0]):
-    w = W[i] * 0.6
-    h = H[i] * 0.6
-    neffs.append(neff_of_channel(w, h, 1, 1.47, 1, 0))
-
-neffs = np.array(neffs)
-P_assume = (neffs*3*1*360) % 360
-P_diff = P_assume-P
-P_diff_ave = angle_average(P_diff)
-
-plt.scatter(W, P_assume)
-plt.scatter(W, P)
-plt.show()
-
-
-# neffs = W*H*1.47 + (1-W*H)*1
-
-plt.xlabel("Neff")
-plt.ylabel("P")
-plt.scatter(neffs, (P_assume-P+180-P_diff_ave) % 360-180+P_diff_ave, A)
-plt.axhline(P_diff_ave, color="red")
-plt.show()
-
 # FIND AND PLACE AND BUILD----------------------------------------------
+
+
 size = 21
-period = 0.6
-fl = 10
+period = 1
+fl = 20
+wl = 0.55
 
 X_axis = np.linspace(-1, 1, size) / 2 * (size-1)*period
+Y_axis = np.linspace(-1, 1, size) / 2 * (size-1)*period
+X_axis, Y_axis = np.meshgrid(X_axis, Y_axis)
 
-P_wants = -np.sqrt(fl**2+X_axis**2)*360
+P_wants = (fl-np.sqrt(fl**2+X_axis**2+Y_axis**2))/wl*360
 # P_wants = np.linspace(0,360,size)*5
 
 P_average = angle_average(P, A)
@@ -88,6 +67,10 @@ P_wants = (P_wants - angle_average(P_wants) + P_average) % 360
 A_mean = np.mean(A)
 A_max = np.max(A)
 
+P_wants_shape = P_wants.shape
+P_wants = P_wants.flatten()
+
+print("P_wants.shape", P_wants.shape)
 # P = P_assume
 
 for iterate in range(100):
@@ -139,6 +122,8 @@ plt.scatter(P_wants % 360, A_gets, color='red')
 plt.show()
 
 # Build and save to file -----------------------------------------
+X_axis = X_axis.flatten()
+Y_axis = Y_axis.flatten()
 
 selected = np.array(selected)
 
@@ -150,7 +135,9 @@ plt.show()
 
 with open("./template/multiplerect.ind", 'r') as f:
     text = f.read().format(
-        SIZE=len(selected)
+        SIZE=len(selected),
+        width=size*period,
+        height=size*period
     )
 
 with open("./template/channel_segment.ind", "r") as f:
@@ -159,12 +146,12 @@ with open("./template/channel_segment.ind", "r") as f:
 segments = [[0, 0, 0, "width", "height", 0.1]]
 
 for i in range(len(selected)):
-    x = f"{i+0.5}*PERIOD-width/2"
-    y = 0
+    x = X_axis[i]
+    y = Y_axis[i]
     z = 0.1
-    w = f"{selected[i][0]} * PERIOD"
-    h = f"{selected[i][1]} * PERIOD"
-    segments.append([x, y, z, w, h, "TALL"])
+    w = f"{selected[i][0]}"
+    h = f"{selected[i][1]}"
+    segments.append([x, y, z, w, h, 0.8])
 
 
 def make_segment(id, x, y, z, w, h, tall):
@@ -174,7 +161,7 @@ def make_segment(id, x, y, z, w, h, tall):
 
 
 for i, segment in enumerate(segments):
-    text += "\n\n"+make_segment(i+1, *segment)
+    text += "\n\n"+make_segment(i+2, *segment)
 
 with open("./multiple/multiplerect.ind", 'w') as f:
     f.write(text)
