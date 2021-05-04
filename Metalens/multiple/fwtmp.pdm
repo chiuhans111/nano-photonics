@@ -3,5 +3,5 @@
 /yl"Monitor Value (a.u.)"
 /l/lh"Monitor Label,\nType, Location:\n"
 /ls1
-fwtmp_m443_ex.dmn /st /powy2 /lt"Mon\#443\nEx^2, (0,0,2)"
+fwtmp_m1_ex.dmn /st /powy2 /lt"Mon\#1\nEx^2, (0,0,1.9)"
 fwtmp.smn /powy2 /lt"Source"

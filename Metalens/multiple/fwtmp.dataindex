@@ -1,2 +1,3 @@
 #This file is generated automatically.  Do not attempt to edit it!
-ft=1015 ext=.dat fname=fwtmp_m443_f??_ex.dat cols=[Y+] xnames=['X','Y'] wnames=['DFT[ex]'] header=[skip,skip,data=XGRID:ZPOS:FORMAT,data=YGRID] mon_num=1 cad_index=443 mon_type=2 mon_label=m443 fgrid=1.8181818,1.8181818,1 labelbyindex=0 datext=.dat
+ft=1013 ext=.dmn fname=fwtmp_m1_ex.dmn cols=[X,Y] xnames=['frequency'] wnames=['DFT[ex]'] mon_num=1 cad_index=1 mon_type=2 mon_label=m1 excitation=0
+ft=1015 ext=.dat fname=fwtmp_m1_f??_ex.dat cols=[Y+] xnames=['X','Y'] wnames=['DFT[ex]'] header=[skip,skip,data=XGRID:ZPOS:FORMAT,data=YGRID] mon_num=1 cad_index=1 mon_type=2 mon_label=m1 fgrid=1.8181818,1.8181818,1 labelbyindex=0 datext=.dat

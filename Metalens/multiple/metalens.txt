@@ -1,2 +1,0 @@
-Monitor Results:
-	Mon#443 |Ex| =  1.033540E+00

@@ -108,11 +108,10 @@ def circle(x, y, radius):
 # -----------------------------------------------------------------------------
 
 resolution = 701
-mon_resolution = 64
+mon_resolution = 256
 
 lens_radius = 10.5
-focal_length = 10
-mon_radius = 10
+focal_length = 18.65
 wavelength = 0.55
 
 
@@ -120,6 +119,8 @@ diagonal = np.sqrt(lens_radius**2+focal_length**2)
 numerical_aperture = lens_radius / diagonal
 airy_radius = 1.22 * wavelength * diagonal / lens_radius / 2
 cutoff_frequency = 2 * numerical_aperture / wavelength
+
+mon_radius = airy_radius/6*mon_resolution
 
 print("\n"*5)
 print("INFORMATIONS-----------------")
@@ -141,7 +142,7 @@ ideallens_field = ideal_lens(in_coord, [[[0, 0, focal_length]]], wavelength)
 ideallens_field = ideallens_field * aperture(in_coord, lens_radius)
 
 
-metalens_field = phasemask.get("./fwtmp_m443_f2_ex.dat")
+metalens_field = phasemask.get_im("./fwtmp_m1_f2_ex.dat", True)
 metalens_field = tf.cast(metalens_field, tf.dtypes.complex64)
 
 plt.imshow(np.angle(metalens_field))
@@ -255,7 +256,7 @@ mtfint = interpolate.interp2d(fx[0, :], fy[:, 0], tf.abs(mtf), kind='cubic')
 plt.figure(f"{lens_name}_MTF_slice")
 plt.plot([0, cutoff_frequency], [1, 0], '--',
          c='k', alpha=0.5, label='limit')
-f = np.linspace(0, cutoff_frequency, 100)
+f = np.linspace(0, cutoff_frequency, 200)
 
 for angle in [0, 10, 30, 45, 60, 90]:
     x = np.cos(angle/180*np.pi) * f

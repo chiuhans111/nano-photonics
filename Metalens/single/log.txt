@@ -1,2 +1,117 @@
 Message: NZ=151, NX=201, NY=201, Estimated Time = 0.048 min
 Message: Nonuniform NX=200 NY=200
+Encountered License Check Error at 09:49:34:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 1 of 2.
+Encountered License Check Error at 09:49:35:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 2 of 2.
+Maximum Retries Exceeded at 09:49:36.
+Encountered License Check Error at 09:50:13:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 1 of 2.
+Encountered License Check Error at 09:50:14:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 2 of 2.
+Maximum Retries Exceeded at 09:50:15.
+Encountered License Check Error at 10:19:52:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 1 of 2.
+Encountered License Check Error at 10:19:53:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 2 of 2.
+Maximum Retries Exceeded at 10:19:54.
+Encountered License Check Error at 11:09:09:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 1 of 2.
+Encountered License Check Error at 11:09:10:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 2 of 2.
+Maximum Retries Exceeded at 11:09:11.
+Encountered License Check Error at 13:02:05:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 1 of 2.
+Encountered License Check Error at 13:02:06:
+An SCL/Flexlm licensing error has occurred.
+
+The number of licenses for this program has been exceeded.
+
+The underlying error is:
+    Licensed number of users already reached.
+    Feature:       RSOFT_DIFFRACTMOD
+    License path:  27020@localhost;
+    FlexNet Licensing error:-4,234
+Attempting Retry 2 of 2.
+Maximum Retries Exceeded at 13:02:07.

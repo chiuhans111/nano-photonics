@@ -8,13 +8,16 @@ alpha = 0
 background_index = 1
 boundary_max = width/2
 boundary_max_y = height/2
-boundary_min = -width/2
-boundary_min_y = -height/2
+boundary_min = 0
+boundary_min_y = 0
 cad_aspectratio = 1
 delta = index-background_index
 dimension = 3
 domain_max = CEILING
+domain_min = -0.1
 eim = 0
+fdtd_bc_bottom = FDTD_BC_SYMMETRIC
+fdtd_bc_left = FDTD_BC_SYMMETRIC
 fdtd_display_res_auto = DISPLAY_RES_AUTO
 fdtd_field_output = 1
 fdtd_monitor_time = lambda/4
@@ -60,14 +63,15 @@ time_monitor 1
 	fieldoutputformat = OUTPUT_REAL_IMAG
 	frequencyanalysis = TIMEMON_FA_DFT
 	begin.x = 0
-	begin.z = 2
+	begin.z = 1.9
 end time_monitor
 
 launch_field 1
 	launch_pathway = 0
-	launch_type = LAUNCH_RECTANGLE
+	launch_type = LAUNCH_PLANEWAVE
 	launch_tilt = 1
 	launch_align_file = 1
 	launch_angle = 0
 	launch_theta = 0
+	launch_position_z = 0
 end launch_field

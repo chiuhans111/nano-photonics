@@ -12,6 +12,7 @@ cad_aspectratio = 1
 delta = index-background_index
 dimension = 3
 domain_max = CEILING
+domain_min = -0.1
 eim = 0
 fdtd_display_res_auto = DISPLAY_RES_AUTO
 fdtd_monitor_time = lambda/4
@@ -58,7 +59,7 @@ time_monitor 2
 	timeaverage = 2
 	monitoroutputformat = OUTPUT_REAL_IMAG
 	begin.x = 0
-	begin.z = CEILING
+	begin.z = CEILING-0.1
 end time_monitor
 
 segment 3

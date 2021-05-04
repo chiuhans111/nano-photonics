@@ -12,6 +12,7 @@ cad_aspectratio = 1
 delta = index-background_index
 dimension = 3
 domain_max = CEILING
+domain_min = -0.1
 eim = 0
 fdtd_display_res_auto = DISPLAY_RES_AUTO
 fdtd_monitor_time = lambda/4
@@ -42,7 +43,7 @@ width = 1
 segment 1
 	extended = 1
 	begin.x = 0
-	begin.z = 0
+	begin.z = 0.1
 	begin.height = height*H
 	begin.width = width*W
 	end.x = 0 rel begin segment 1
@@ -59,8 +60,17 @@ time_monitor 2
 	timeaverage = 2
 	monitoroutputformat = OUTPUT_REAL_IMAG
 	begin.x = 0
-	begin.z = 3
+	begin.z = CEILING-0.1
 end time_monitor
+
+segment 3
+	extended = 1
+	begin.x = 0
+	begin.z = 0
+	end.x = 0 rel begin segment 1
+	end.y = 0 rel begin segment 1
+	end.z = 0 rel begin segment 1
+end segment
 
 
 
@@ -83,12 +93,12 @@ SCAN
 
 PREFIX mosttmp
 PREFIX_STYLE 0
-CLUSTER 0 0 0 0 1 ""
-USERSIM_CALLSTYLE 1936876915 151010304
+CLUSTER 1 0 0 0 1 ""
+USERSIM_CALLSTYLE 0 0
 
 [SIMULATION]
 SIMTOOL ST_DEFAULT 
-WINDOW_SIZE 0
+WINDOW_SIZE 2
 VERBOSITY 0
 PRE_WHOLE_CMD 
 POST_WHOLE_CMD 

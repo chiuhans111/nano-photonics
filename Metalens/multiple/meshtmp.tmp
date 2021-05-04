@@ -1,0 +1,6691 @@
+
+CEILING = 2
+H = 0.5
+M = 8
+SIZE = 441
+W = 0.5
+alpha = 0
+background_index = 1
+boundary_max = width/2
+boundary_max_y = height/2
+boundary_min = 0
+boundary_min_y = 0
+cad_aspectratio = 1
+delta = index-background_index
+dimension = 3
+domain_max = CEILING
+domain_min = -0.1
+eim = 0
+fdtd_bc_bottom = FDTD_BC_SYMMETRIC
+fdtd_bc_left = FDTD_BC_SYMMETRIC
+fdtd_display_res_auto = DISPLAY_RES_AUTO
+fdtd_field_output = 1
+fdtd_monitor_time = lambda/4
+fdtd_monitor_time_auto = MONITOR_TIME_AUTO
+fdtd_optimize_warned = 2
+fdtd_pml_cells_enable = 1
+fdtd_stop_auto = 1
+fdtd_stop_time = 43.65
+fdtd_stop_time_auto = 1
+fdtd_time_step = 0.0171875
+fdtd_time_step_auto = 1
+fdtd_update_time = 5*lambda/4
+fdtd_update_time_auto = DISPLAY_TIME_MEDIUM
+free_space_wavelength = 0.55
+grid_nonuniform = 1
+grid_size = 0.03
+grid_size_y = 0.03
+height = 21
+index = 2
+k0 = (2*pi)/free_space_wavelength
+lambda = free_space_wavelength
+launch_align_file = 1
+launch_angle = 0
+launch_height = inf
+launch_theta = 0
+launch_tilt = 1
+launch_type = LAUNCH_PLANEWAVE
+launch_width = inf
+modecalc_display_mode = DISPLAY_CONTOURMAPXZ
+rcwa_harmonics_x = M
+rcwa_harmonics_y = M
+rcwa_launch_delta_phase = 0
+rcwa_launch_pol = 0
+rcwa_output_field_format = 4
+rcwa_output_option = 1
+sim_tool = ST_FULLWAVE
+step_size = 0.03
+structure = STRUCT_FIBER
+width = 21
+
+
+time_monitor 1
+	profile_type = PROF_INACTIVE
+	color = 2
+	type = TIMEMON_EXTENDED
+	timeaverage = 2
+	complexmonitor = 1
+	fieldoutputmask = 1
+	fieldoutputformat = OUTPUT_REAL_IMAG
+	frequencyanalysis = TIMEMON_FA_DFT
+	begin.x = 0
+	begin.z = 1.9
+end time_monitor
+
+segment 2
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.z = 0
+	end.x = 0 rel begin segment 2
+	end.y = 0 rel begin segment 2
+	end.z = 0.1 rel begin segment 2
+end segment
+
+segment 3
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.709441121
+	begin.width = 0.2015502813
+	end.x = 0 rel begin segment 3
+	end.y = 0 rel begin segment 3
+	end.z = 0.8 rel begin segment 3
+	end.height = 0.709441121
+	end.width = 0.2015502813
+end segment
+
+segment 4
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 4
+	end.y = 0 rel begin segment 4
+	end.z = 0.8 rel begin segment 4
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 5
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 5
+	end.y = 0 rel begin segment 5
+	end.z = 0.8 rel begin segment 5
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 6
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 6
+	end.y = 0 rel begin segment 6
+	end.z = 0.8 rel begin segment 6
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 7
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 7
+	end.y = 0 rel begin segment 7
+	end.z = 0.8 rel begin segment 7
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 8
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 8
+	end.y = 0 rel begin segment 8
+	end.z = 0.8 rel begin segment 8
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 9
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 9
+	end.y = 0 rel begin segment 9
+	end.z = 0.8 rel begin segment 9
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 10
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 10
+	end.y = 0 rel begin segment 10
+	end.z = 0.8 rel begin segment 10
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 11
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 11
+	end.y = 0 rel begin segment 11
+	end.z = 0.8 rel begin segment 11
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 12
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 12
+	end.y = 0 rel begin segment 12
+	end.z = 0.8 rel begin segment 12
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 13
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 13
+	end.y = 0 rel begin segment 13
+	end.z = 0.8 rel begin segment 13
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 14
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 14
+	end.y = 0 rel begin segment 14
+	end.z = 0.8 rel begin segment 14
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 15
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 15
+	end.y = 0 rel begin segment 15
+	end.z = 0.8 rel begin segment 15
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 16
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 16
+	end.y = 0 rel begin segment 16
+	end.z = 0.8 rel begin segment 16
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 17
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 17
+	end.y = 0 rel begin segment 17
+	end.z = 0.8 rel begin segment 17
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 18
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 18
+	end.y = 0 rel begin segment 18
+	end.z = 0.8 rel begin segment 18
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 19
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 19
+	end.y = 0 rel begin segment 19
+	end.z = 0.8 rel begin segment 19
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 20
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 20
+	end.y = 0 rel begin segment 20
+	end.z = 0.8 rel begin segment 20
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 21
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 21
+	end.y = 0 rel begin segment 21
+	end.z = 0.8 rel begin segment 21
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 22
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 22
+	end.y = 0 rel begin segment 22
+	end.z = 0.8 rel begin segment 22
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 23
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -10
+	begin.z = 0.1
+	begin.height = 0.709441121
+	begin.width = 0.2015502813
+	end.x = 0 rel begin segment 23
+	end.y = 0 rel begin segment 23
+	end.z = 0.8 rel begin segment 23
+	end.height = 0.709441121
+	end.width = 0.2015502813
+end segment
+
+segment 24
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 24
+	end.y = 0 rel begin segment 24
+	end.z = 0.8 rel begin segment 24
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 25
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.568415545
+	begin.width = 0.8
+	end.x = 0 rel begin segment 25
+	end.y = 0 rel begin segment 25
+	end.z = 0.8 rel begin segment 25
+	end.height = 0.568415545
+	end.width = 0.8
+end segment
+
+segment 26
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 26
+	end.y = 0 rel begin segment 26
+	end.z = 0.8 rel begin segment 26
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 27
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 27
+	end.y = 0 rel begin segment 27
+	end.z = 0.8 rel begin segment 27
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 28
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 28
+	end.y = 0 rel begin segment 28
+	end.z = 0.8 rel begin segment 28
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 29
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 29
+	end.y = 0 rel begin segment 29
+	end.z = 0.8 rel begin segment 29
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 30
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 30
+	end.y = 0 rel begin segment 30
+	end.z = 0.8 rel begin segment 30
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 31
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 31
+	end.y = 0 rel begin segment 31
+	end.z = 0.8 rel begin segment 31
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 32
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 32
+	end.y = 0 rel begin segment 32
+	end.z = 0.8 rel begin segment 32
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 33
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 33
+	end.y = 0 rel begin segment 33
+	end.z = 0.8 rel begin segment 33
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 34
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.7477017237
+	end.x = 0 rel begin segment 34
+	end.y = 0 rel begin segment 34
+	end.z = 0.8 rel begin segment 34
+	end.height = 0.2
+	end.width = 0.7477017237
+end segment
+
+segment 35
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 35
+	end.y = 0 rel begin segment 35
+	end.z = 0.8 rel begin segment 35
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 36
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 36
+	end.y = 0 rel begin segment 36
+	end.z = 0.8 rel begin segment 36
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 37
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 37
+	end.y = 0 rel begin segment 37
+	end.z = 0.8 rel begin segment 37
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 38
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 38
+	end.y = 0 rel begin segment 38
+	end.z = 0.8 rel begin segment 38
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 39
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 39
+	end.y = 0 rel begin segment 39
+	end.z = 0.8 rel begin segment 39
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 40
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 40
+	end.y = 0 rel begin segment 40
+	end.z = 0.8 rel begin segment 40
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 41
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 41
+	end.y = 0 rel begin segment 41
+	end.z = 0.8 rel begin segment 41
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 42
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 42
+	end.y = 0 rel begin segment 42
+	end.z = 0.8 rel begin segment 42
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 43
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.568415545
+	begin.width = 0.8
+	end.x = 0 rel begin segment 43
+	end.y = 0 rel begin segment 43
+	end.z = 0.8 rel begin segment 43
+	end.height = 0.568415545
+	end.width = 0.8
+end segment
+
+segment 44
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -9
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 44
+	end.y = 0 rel begin segment 44
+	end.z = 0.8 rel begin segment 44
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 45
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 45
+	end.y = 0 rel begin segment 45
+	end.z = 0.8 rel begin segment 45
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 46
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 46
+	end.y = 0 rel begin segment 46
+	end.z = 0.8 rel begin segment 46
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 47
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6687341961
+	begin.width = 0.6379998292
+	end.x = 0 rel begin segment 47
+	end.y = 0 rel begin segment 47
+	end.z = 0.8 rel begin segment 47
+	end.height = 0.6687341961
+	end.width = 0.6379998292
+end segment
+
+segment 48
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 48
+	end.y = 0 rel begin segment 48
+	end.z = 0.8 rel begin segment 48
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 49
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 49
+	end.y = 0 rel begin segment 49
+	end.z = 0.8 rel begin segment 49
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 50
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 50
+	end.y = 0 rel begin segment 50
+	end.z = 0.8 rel begin segment 50
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 51
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 51
+	end.y = 0 rel begin segment 51
+	end.z = 0.8 rel begin segment 51
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 52
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 52
+	end.y = 0 rel begin segment 52
+	end.z = 0.8 rel begin segment 52
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 53
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 53
+	end.y = 0 rel begin segment 53
+	end.z = 0.8 rel begin segment 53
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 54
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 54
+	end.y = 0 rel begin segment 54
+	end.z = 0.8 rel begin segment 54
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 55
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6947619466
+	begin.width = 0.7986700945
+	end.x = 0 rel begin segment 55
+	end.y = 0 rel begin segment 55
+	end.z = 0.8 rel begin segment 55
+	end.height = 0.6947619466
+	end.width = 0.7986700945
+end segment
+
+segment 56
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 56
+	end.y = 0 rel begin segment 56
+	end.z = 0.8 rel begin segment 56
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 57
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 57
+	end.y = 0 rel begin segment 57
+	end.z = 0.8 rel begin segment 57
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 58
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 58
+	end.y = 0 rel begin segment 58
+	end.z = 0.8 rel begin segment 58
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 59
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 59
+	end.y = 0 rel begin segment 59
+	end.z = 0.8 rel begin segment 59
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 60
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 60
+	end.y = 0 rel begin segment 60
+	end.z = 0.8 rel begin segment 60
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 61
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 61
+	end.y = 0 rel begin segment 61
+	end.z = 0.8 rel begin segment 61
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 62
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 62
+	end.y = 0 rel begin segment 62
+	end.z = 0.8 rel begin segment 62
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 63
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.6687341961
+	begin.width = 0.6379998292
+	end.x = 0 rel begin segment 63
+	end.y = 0 rel begin segment 63
+	end.z = 0.8 rel begin segment 63
+	end.height = 0.6687341961
+	end.width = 0.6379998292
+end segment
+
+segment 64
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 64
+	end.y = 0 rel begin segment 64
+	end.z = 0.8 rel begin segment 64
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 65
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -8
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 65
+	end.y = 0 rel begin segment 65
+	end.z = 0.8 rel begin segment 65
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 66
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 66
+	end.y = 0 rel begin segment 66
+	end.z = 0.8 rel begin segment 66
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 67
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 67
+	end.y = 0 rel begin segment 67
+	end.z = 0.8 rel begin segment 67
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 68
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 68
+	end.y = 0 rel begin segment 68
+	end.z = 0.8 rel begin segment 68
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 69
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.3852532708
+	begin.width = 0.4677989044
+	end.x = 0 rel begin segment 69
+	end.y = 0 rel begin segment 69
+	end.z = 0.8 rel begin segment 69
+	end.height = 0.3852532708
+	end.width = 0.4677989044
+end segment
+
+segment 70
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 70
+	end.y = 0 rel begin segment 70
+	end.z = 0.8 rel begin segment 70
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 71
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 71
+	end.y = 0 rel begin segment 71
+	end.z = 0.8 rel begin segment 71
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 72
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 72
+	end.y = 0 rel begin segment 72
+	end.z = 0.8 rel begin segment 72
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 73
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 73
+	end.y = 0 rel begin segment 73
+	end.z = 0.8 rel begin segment 73
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 74
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 74
+	end.y = 0 rel begin segment 74
+	end.z = 0.8 rel begin segment 74
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 75
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 75
+	end.y = 0 rel begin segment 75
+	end.z = 0.8 rel begin segment 75
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 76
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.4624076276
+	begin.width = 0.2
+	end.x = 0 rel begin segment 76
+	end.y = 0 rel begin segment 76
+	end.z = 0.8 rel begin segment 76
+	end.height = 0.4624076276
+	end.width = 0.2
+end segment
+
+segment 77
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 77
+	end.y = 0 rel begin segment 77
+	end.z = 0.8 rel begin segment 77
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 78
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 78
+	end.y = 0 rel begin segment 78
+	end.z = 0.8 rel begin segment 78
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 79
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 79
+	end.y = 0 rel begin segment 79
+	end.z = 0.8 rel begin segment 79
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 80
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 80
+	end.y = 0 rel begin segment 80
+	end.z = 0.8 rel begin segment 80
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 81
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 81
+	end.y = 0 rel begin segment 81
+	end.z = 0.8 rel begin segment 81
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 82
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 82
+	end.y = 0 rel begin segment 82
+	end.z = 0.8 rel begin segment 82
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 83
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.3852532708
+	begin.width = 0.4677989044
+	end.x = 0 rel begin segment 83
+	end.y = 0 rel begin segment 83
+	end.z = 0.8 rel begin segment 83
+	end.height = 0.3852532708
+	end.width = 0.4677989044
+end segment
+
+segment 84
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 84
+	end.y = 0 rel begin segment 84
+	end.z = 0.8 rel begin segment 84
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 85
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 85
+	end.y = 0 rel begin segment 85
+	end.z = 0.8 rel begin segment 85
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 86
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -7
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 86
+	end.y = 0 rel begin segment 86
+	end.z = 0.8 rel begin segment 86
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 87
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 87
+	end.y = 0 rel begin segment 87
+	end.z = 0.8 rel begin segment 87
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 88
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 88
+	end.y = 0 rel begin segment 88
+	end.z = 0.8 rel begin segment 88
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 89
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 89
+	end.y = 0 rel begin segment 89
+	end.z = 0.8 rel begin segment 89
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 90
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 90
+	end.y = 0 rel begin segment 90
+	end.z = 0.8 rel begin segment 90
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 91
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2688279706
+	end.x = 0 rel begin segment 91
+	end.y = 0 rel begin segment 91
+	end.z = 0.8 rel begin segment 91
+	end.height = 0.2
+	end.width = 0.2688279706
+end segment
+
+segment 92
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 92
+	end.y = 0 rel begin segment 92
+	end.z = 0.8 rel begin segment 92
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 93
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 93
+	end.y = 0 rel begin segment 93
+	end.z = 0.8 rel begin segment 93
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 94
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 94
+	end.y = 0 rel begin segment 94
+	end.z = 0.8 rel begin segment 94
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 95
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 95
+	end.y = 0 rel begin segment 95
+	end.z = 0.8 rel begin segment 95
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 96
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 96
+	end.y = 0 rel begin segment 96
+	end.z = 0.8 rel begin segment 96
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 97
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.3701529738
+	begin.width = 0.2149699316
+	end.x = 0 rel begin segment 97
+	end.y = 0 rel begin segment 97
+	end.z = 0.8 rel begin segment 97
+	end.height = 0.3701529738
+	end.width = 0.2149699316
+end segment
+
+segment 98
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 98
+	end.y = 0 rel begin segment 98
+	end.z = 0.8 rel begin segment 98
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 99
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 99
+	end.y = 0 rel begin segment 99
+	end.z = 0.8 rel begin segment 99
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 100
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 100
+	end.y = 0 rel begin segment 100
+	end.z = 0.8 rel begin segment 100
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 101
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 101
+	end.y = 0 rel begin segment 101
+	end.z = 0.8 rel begin segment 101
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 102
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 102
+	end.y = 0 rel begin segment 102
+	end.z = 0.8 rel begin segment 102
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 103
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2688279706
+	end.x = 0 rel begin segment 103
+	end.y = 0 rel begin segment 103
+	end.z = 0.8 rel begin segment 103
+	end.height = 0.2
+	end.width = 0.2688279706
+end segment
+
+segment 104
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 104
+	end.y = 0 rel begin segment 104
+	end.z = 0.8 rel begin segment 104
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 105
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 105
+	end.y = 0 rel begin segment 105
+	end.z = 0.8 rel begin segment 105
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 106
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 106
+	end.y = 0 rel begin segment 106
+	end.z = 0.8 rel begin segment 106
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 107
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -6
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 107
+	end.y = 0 rel begin segment 107
+	end.z = 0.8 rel begin segment 107
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 108
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 108
+	end.y = 0 rel begin segment 108
+	end.z = 0.8 rel begin segment 108
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 109
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 109
+	end.y = 0 rel begin segment 109
+	end.z = 0.8 rel begin segment 109
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 110
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 110
+	end.y = 0 rel begin segment 110
+	end.z = 0.8 rel begin segment 110
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 111
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 111
+	end.y = 0 rel begin segment 111
+	end.z = 0.8 rel begin segment 111
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 112
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 112
+	end.y = 0 rel begin segment 112
+	end.z = 0.8 rel begin segment 112
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 113
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 113
+	end.y = 0 rel begin segment 113
+	end.z = 0.8 rel begin segment 113
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 114
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 114
+	end.y = 0 rel begin segment 114
+	end.z = 0.8 rel begin segment 114
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 115
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 115
+	end.y = 0 rel begin segment 115
+	end.z = 0.8 rel begin segment 115
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 116
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 116
+	end.y = 0 rel begin segment 116
+	end.z = 0.8 rel begin segment 116
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 117
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 117
+	end.y = 0 rel begin segment 117
+	end.z = 0.8 rel begin segment 117
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 118
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 118
+	end.y = 0 rel begin segment 118
+	end.z = 0.8 rel begin segment 118
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 119
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 119
+	end.y = 0 rel begin segment 119
+	end.z = 0.8 rel begin segment 119
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 120
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 120
+	end.y = 0 rel begin segment 120
+	end.z = 0.8 rel begin segment 120
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 121
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 121
+	end.y = 0 rel begin segment 121
+	end.z = 0.8 rel begin segment 121
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 122
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 122
+	end.y = 0 rel begin segment 122
+	end.z = 0.8 rel begin segment 122
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 123
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 123
+	end.y = 0 rel begin segment 123
+	end.z = 0.8 rel begin segment 123
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 124
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 124
+	end.y = 0 rel begin segment 124
+	end.z = 0.8 rel begin segment 124
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 125
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 125
+	end.y = 0 rel begin segment 125
+	end.z = 0.8 rel begin segment 125
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 126
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 126
+	end.y = 0 rel begin segment 126
+	end.z = 0.8 rel begin segment 126
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 127
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 127
+	end.y = 0 rel begin segment 127
+	end.z = 0.8 rel begin segment 127
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 128
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -5
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 128
+	end.y = 0 rel begin segment 128
+	end.z = 0.8 rel begin segment 128
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 129
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 129
+	end.y = 0 rel begin segment 129
+	end.z = 0.8 rel begin segment 129
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 130
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 130
+	end.y = 0 rel begin segment 130
+	end.z = 0.8 rel begin segment 130
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 131
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 131
+	end.y = 0 rel begin segment 131
+	end.z = 0.8 rel begin segment 131
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 132
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 132
+	end.y = 0 rel begin segment 132
+	end.z = 0.8 rel begin segment 132
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 133
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 133
+	end.y = 0 rel begin segment 133
+	end.z = 0.8 rel begin segment 133
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 134
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 134
+	end.y = 0 rel begin segment 134
+	end.z = 0.8 rel begin segment 134
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 135
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.7910680539
+	begin.width = 0.5555518057
+	end.x = 0 rel begin segment 135
+	end.y = 0 rel begin segment 135
+	end.z = 0.8 rel begin segment 135
+	end.height = 0.7910680539
+	end.width = 0.5555518057
+end segment
+
+segment 136
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 136
+	end.y = 0 rel begin segment 136
+	end.z = 0.8 rel begin segment 136
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 137
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 137
+	end.y = 0 rel begin segment 137
+	end.z = 0.8 rel begin segment 137
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 138
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 138
+	end.y = 0 rel begin segment 138
+	end.z = 0.8 rel begin segment 138
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 139
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.4135428638
+	begin.width = 0.6653637911
+	end.x = 0 rel begin segment 139
+	end.y = 0 rel begin segment 139
+	end.z = 0.8 rel begin segment 139
+	end.height = 0.4135428638
+	end.width = 0.6653637911
+end segment
+
+segment 140
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 140
+	end.y = 0 rel begin segment 140
+	end.z = 0.8 rel begin segment 140
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 141
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 141
+	end.y = 0 rel begin segment 141
+	end.z = 0.8 rel begin segment 141
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 142
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 142
+	end.y = 0 rel begin segment 142
+	end.z = 0.8 rel begin segment 142
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 143
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.7910680539
+	begin.width = 0.5555518057
+	end.x = 0 rel begin segment 143
+	end.y = 0 rel begin segment 143
+	end.z = 0.8 rel begin segment 143
+	end.height = 0.7910680539
+	end.width = 0.5555518057
+end segment
+
+segment 144
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 144
+	end.y = 0 rel begin segment 144
+	end.z = 0.8 rel begin segment 144
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 145
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 145
+	end.y = 0 rel begin segment 145
+	end.z = 0.8 rel begin segment 145
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 146
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 146
+	end.y = 0 rel begin segment 146
+	end.z = 0.8 rel begin segment 146
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 147
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 147
+	end.y = 0 rel begin segment 147
+	end.z = 0.8 rel begin segment 147
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 148
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 148
+	end.y = 0 rel begin segment 148
+	end.z = 0.8 rel begin segment 148
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 149
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -4
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 149
+	end.y = 0 rel begin segment 149
+	end.z = 0.8 rel begin segment 149
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 150
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 150
+	end.y = 0 rel begin segment 150
+	end.z = 0.8 rel begin segment 150
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 151
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 151
+	end.y = 0 rel begin segment 151
+	end.z = 0.8 rel begin segment 151
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 152
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 152
+	end.y = 0 rel begin segment 152
+	end.z = 0.8 rel begin segment 152
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 153
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 153
+	end.y = 0 rel begin segment 153
+	end.z = 0.8 rel begin segment 153
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 154
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 154
+	end.y = 0 rel begin segment 154
+	end.z = 0.8 rel begin segment 154
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 155
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 155
+	end.y = 0 rel begin segment 155
+	end.z = 0.8 rel begin segment 155
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 156
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 156
+	end.y = 0 rel begin segment 156
+	end.z = 0.8 rel begin segment 156
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 157
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2924548197
+	begin.width = 0.7757533561
+	end.x = 0 rel begin segment 157
+	end.y = 0 rel begin segment 157
+	end.z = 0.8 rel begin segment 157
+	end.height = 0.2924548197
+	end.width = 0.7757533561
+end segment
+
+segment 158
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 158
+	end.y = 0 rel begin segment 158
+	end.z = 0.8 rel begin segment 158
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 159
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 159
+	end.y = 0 rel begin segment 159
+	end.z = 0.8 rel begin segment 159
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 160
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.3700976444
+	begin.width = 0.4285825544
+	end.x = 0 rel begin segment 160
+	end.y = 0 rel begin segment 160
+	end.z = 0.8 rel begin segment 160
+	end.height = 0.3700976444
+	end.width = 0.4285825544
+end segment
+
+segment 161
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 161
+	end.y = 0 rel begin segment 161
+	end.z = 0.8 rel begin segment 161
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 162
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 162
+	end.y = 0 rel begin segment 162
+	end.z = 0.8 rel begin segment 162
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 163
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2924548197
+	begin.width = 0.7757533561
+	end.x = 0 rel begin segment 163
+	end.y = 0 rel begin segment 163
+	end.z = 0.8 rel begin segment 163
+	end.height = 0.2924548197
+	end.width = 0.7757533561
+end segment
+
+segment 164
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 164
+	end.y = 0 rel begin segment 164
+	end.z = 0.8 rel begin segment 164
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 165
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 165
+	end.y = 0 rel begin segment 165
+	end.z = 0.8 rel begin segment 165
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 166
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 166
+	end.y = 0 rel begin segment 166
+	end.z = 0.8 rel begin segment 166
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 167
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 167
+	end.y = 0 rel begin segment 167
+	end.z = 0.8 rel begin segment 167
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 168
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 168
+	end.y = 0 rel begin segment 168
+	end.z = 0.8 rel begin segment 168
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 169
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 169
+	end.y = 0 rel begin segment 169
+	end.z = 0.8 rel begin segment 169
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 170
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -3
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 170
+	end.y = 0 rel begin segment 170
+	end.z = 0.8 rel begin segment 170
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 171
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 171
+	end.y = 0 rel begin segment 171
+	end.z = 0.8 rel begin segment 171
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 172
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 172
+	end.y = 0 rel begin segment 172
+	end.z = 0.8 rel begin segment 172
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 173
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 173
+	end.y = 0 rel begin segment 173
+	end.z = 0.8 rel begin segment 173
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 174
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 174
+	end.y = 0 rel begin segment 174
+	end.z = 0.8 rel begin segment 174
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 175
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 175
+	end.y = 0 rel begin segment 175
+	end.z = 0.8 rel begin segment 175
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 176
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 176
+	end.y = 0 rel begin segment 176
+	end.z = 0.8 rel begin segment 176
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 177
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 177
+	end.y = 0 rel begin segment 177
+	end.z = 0.8 rel begin segment 177
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 178
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 178
+	end.y = 0 rel begin segment 178
+	end.z = 0.8 rel begin segment 178
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 179
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.7329957991
+	begin.width = 0.7909484864
+	end.x = 0 rel begin segment 179
+	end.y = 0 rel begin segment 179
+	end.z = 0.8 rel begin segment 179
+	end.height = 0.7329957991
+	end.width = 0.7909484864
+end segment
+
+segment 180
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 180
+	end.y = 0 rel begin segment 180
+	end.z = 0.8 rel begin segment 180
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 181
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.4563757441
+	begin.width = 0.5470254378
+	end.x = 0 rel begin segment 181
+	end.y = 0 rel begin segment 181
+	end.z = 0.8 rel begin segment 181
+	end.height = 0.4563757441
+	end.width = 0.5470254378
+end segment
+
+segment 182
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 182
+	end.y = 0 rel begin segment 182
+	end.z = 0.8 rel begin segment 182
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 183
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.7329957991
+	begin.width = 0.7909484864
+	end.x = 0 rel begin segment 183
+	end.y = 0 rel begin segment 183
+	end.z = 0.8 rel begin segment 183
+	end.height = 0.7329957991
+	end.width = 0.7909484864
+end segment
+
+segment 184
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 184
+	end.y = 0 rel begin segment 184
+	end.z = 0.8 rel begin segment 184
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 185
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 185
+	end.y = 0 rel begin segment 185
+	end.z = 0.8 rel begin segment 185
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 186
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 186
+	end.y = 0 rel begin segment 186
+	end.z = 0.8 rel begin segment 186
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 187
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 187
+	end.y = 0 rel begin segment 187
+	end.z = 0.8 rel begin segment 187
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 188
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 188
+	end.y = 0 rel begin segment 188
+	end.z = 0.8 rel begin segment 188
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 189
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 189
+	end.y = 0 rel begin segment 189
+	end.z = 0.8 rel begin segment 189
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 190
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 190
+	end.y = 0 rel begin segment 190
+	end.z = 0.8 rel begin segment 190
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 191
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -2
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 191
+	end.y = 0 rel begin segment 191
+	end.z = 0.8 rel begin segment 191
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 192
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 192
+	end.y = 0 rel begin segment 192
+	end.z = 0.8 rel begin segment 192
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 193
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 193
+	end.y = 0 rel begin segment 193
+	end.z = 0.8 rel begin segment 193
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 194
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 194
+	end.y = 0 rel begin segment 194
+	end.z = 0.8 rel begin segment 194
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 195
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 195
+	end.y = 0 rel begin segment 195
+	end.z = 0.8 rel begin segment 195
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 196
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 196
+	end.y = 0 rel begin segment 196
+	end.z = 0.8 rel begin segment 196
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 197
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 197
+	end.y = 0 rel begin segment 197
+	end.z = 0.8 rel begin segment 197
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 198
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 198
+	end.y = 0 rel begin segment 198
+	end.z = 0.8 rel begin segment 198
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 199
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 199
+	end.y = 0 rel begin segment 199
+	end.z = 0.8 rel begin segment 199
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 200
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 200
+	end.y = 0 rel begin segment 200
+	end.z = 0.8 rel begin segment 200
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 201
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.6615060637
+	begin.width = 0.2314051647
+	end.x = 0 rel begin segment 201
+	end.y = 0 rel begin segment 201
+	end.z = 0.8 rel begin segment 201
+	end.height = 0.6615060637
+	end.width = 0.2314051647
+end segment
+
+segment 202
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.2033624907
+	begin.width = 0.4414076236
+	end.x = 0 rel begin segment 202
+	end.y = 0 rel begin segment 202
+	end.z = 0.8 rel begin segment 202
+	end.height = 0.2033624907
+	end.width = 0.4414076236
+end segment
+
+segment 203
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.6615060637
+	begin.width = 0.2314051647
+	end.x = 0 rel begin segment 203
+	end.y = 0 rel begin segment 203
+	end.z = 0.8 rel begin segment 203
+	end.height = 0.6615060637
+	end.width = 0.2314051647
+end segment
+
+segment 204
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 204
+	end.y = 0 rel begin segment 204
+	end.z = 0.8 rel begin segment 204
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 205
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 205
+	end.y = 0 rel begin segment 205
+	end.z = 0.8 rel begin segment 205
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 206
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 206
+	end.y = 0 rel begin segment 206
+	end.z = 0.8 rel begin segment 206
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 207
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 207
+	end.y = 0 rel begin segment 207
+	end.z = 0.8 rel begin segment 207
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 208
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 208
+	end.y = 0 rel begin segment 208
+	end.z = 0.8 rel begin segment 208
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 209
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 209
+	end.y = 0 rel begin segment 209
+	end.z = 0.8 rel begin segment 209
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 210
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 210
+	end.y = 0 rel begin segment 210
+	end.z = 0.8 rel begin segment 210
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 211
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 211
+	end.y = 0 rel begin segment 211
+	end.z = 0.8 rel begin segment 211
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 212
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = -1
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 212
+	end.y = 0 rel begin segment 212
+	end.z = 0.8 rel begin segment 212
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 213
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 213
+	end.y = 0 rel begin segment 213
+	end.z = 0.8 rel begin segment 213
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 214
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.7477017237
+	end.x = 0 rel begin segment 214
+	end.y = 0 rel begin segment 214
+	end.z = 0.8 rel begin segment 214
+	end.height = 0.2
+	end.width = 0.7477017237
+end segment
+
+segment 215
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.z = 0.1
+	begin.height = 0.6947619466
+	begin.width = 0.7986700945
+	end.x = 0 rel begin segment 215
+	end.y = 0 rel begin segment 215
+	end.z = 0.8 rel begin segment 215
+	end.height = 0.6947619466
+	end.width = 0.7986700945
+end segment
+
+segment 216
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.z = 0.1
+	begin.height = 0.4624076276
+	begin.width = 0.2
+	end.x = 0 rel begin segment 216
+	end.y = 0 rel begin segment 216
+	end.z = 0.8 rel begin segment 216
+	end.height = 0.4624076276
+	end.width = 0.2
+end segment
+
+segment 217
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.z = 0.1
+	begin.height = 0.3701529738
+	begin.width = 0.2149699316
+	end.x = 0 rel begin segment 217
+	end.y = 0 rel begin segment 217
+	end.z = 0.8 rel begin segment 217
+	end.height = 0.3701529738
+	end.width = 0.2149699316
+end segment
+
+segment 218
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 218
+	end.y = 0 rel begin segment 218
+	end.z = 0.8 rel begin segment 218
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 219
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.z = 0.1
+	begin.height = 0.4135428638
+	begin.width = 0.6653637911
+	end.x = 0 rel begin segment 219
+	end.y = 0 rel begin segment 219
+	end.z = 0.8 rel begin segment 219
+	end.height = 0.4135428638
+	end.width = 0.6653637911
+end segment
+
+segment 220
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.z = 0.1
+	begin.height = 0.3700976444
+	begin.width = 0.4285825544
+	end.x = 0 rel begin segment 220
+	end.y = 0 rel begin segment 220
+	end.z = 0.8 rel begin segment 220
+	end.height = 0.3700976444
+	end.width = 0.4285825544
+end segment
+
+segment 221
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.z = 0.1
+	begin.height = 0.4563757441
+	begin.width = 0.5470254378
+	end.x = 0 rel begin segment 221
+	end.y = 0 rel begin segment 221
+	end.z = 0.8 rel begin segment 221
+	end.height = 0.4563757441
+	end.width = 0.5470254378
+end segment
+
+segment 222
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.z = 0.1
+	begin.height = 0.2033624907
+	begin.width = 0.4414076236
+	end.x = 0 rel begin segment 222
+	end.y = 0 rel begin segment 222
+	end.z = 0.8 rel begin segment 222
+	end.height = 0.2033624907
+	end.width = 0.4414076236
+end segment
+
+segment 223
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.z = 0.1
+	begin.height = 0.6941402843
+	begin.width = 0.3468946929
+	end.x = 0 rel begin segment 223
+	end.y = 0 rel begin segment 223
+	end.z = 0.8 rel begin segment 223
+	end.height = 0.6941402843
+	end.width = 0.3468946929
+end segment
+
+segment 224
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.z = 0.1
+	begin.height = 0.2033624907
+	begin.width = 0.4414076236
+	end.x = 0 rel begin segment 224
+	end.y = 0 rel begin segment 224
+	end.z = 0.8 rel begin segment 224
+	end.height = 0.2033624907
+	end.width = 0.4414076236
+end segment
+
+segment 225
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.z = 0.1
+	begin.height = 0.4563757441
+	begin.width = 0.5470254378
+	end.x = 0 rel begin segment 225
+	end.y = 0 rel begin segment 225
+	end.z = 0.8 rel begin segment 225
+	end.height = 0.4563757441
+	end.width = 0.5470254378
+end segment
+
+segment 226
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.z = 0.1
+	begin.height = 0.3700976444
+	begin.width = 0.4285825544
+	end.x = 0 rel begin segment 226
+	end.y = 0 rel begin segment 226
+	end.z = 0.8 rel begin segment 226
+	end.height = 0.3700976444
+	end.width = 0.4285825544
+end segment
+
+segment 227
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.z = 0.1
+	begin.height = 0.4135428638
+	begin.width = 0.6653637911
+	end.x = 0 rel begin segment 227
+	end.y = 0 rel begin segment 227
+	end.z = 0.8 rel begin segment 227
+	end.height = 0.4135428638
+	end.width = 0.6653637911
+end segment
+
+segment 228
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 228
+	end.y = 0 rel begin segment 228
+	end.z = 0.8 rel begin segment 228
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 229
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.z = 0.1
+	begin.height = 0.3701529738
+	begin.width = 0.2149699316
+	end.x = 0 rel begin segment 229
+	end.y = 0 rel begin segment 229
+	end.z = 0.8 rel begin segment 229
+	end.height = 0.3701529738
+	end.width = 0.2149699316
+end segment
+
+segment 230
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.z = 0.1
+	begin.height = 0.4624076276
+	begin.width = 0.2
+	end.x = 0 rel begin segment 230
+	end.y = 0 rel begin segment 230
+	end.z = 0.8 rel begin segment 230
+	end.height = 0.4624076276
+	end.width = 0.2
+end segment
+
+segment 231
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.z = 0.1
+	begin.height = 0.6947619466
+	begin.width = 0.7986700945
+	end.x = 0 rel begin segment 231
+	end.y = 0 rel begin segment 231
+	end.z = 0.8 rel begin segment 231
+	end.height = 0.6947619466
+	end.width = 0.7986700945
+end segment
+
+segment 232
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.7477017237
+	end.x = 0 rel begin segment 232
+	end.y = 0 rel begin segment 232
+	end.z = 0.8 rel begin segment 232
+	end.height = 0.2
+	end.width = 0.7477017237
+end segment
+
+segment 233
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 233
+	end.y = 0 rel begin segment 233
+	end.z = 0.8 rel begin segment 233
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 234
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 234
+	end.y = 0 rel begin segment 234
+	end.z = 0.8 rel begin segment 234
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 235
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 235
+	end.y = 0 rel begin segment 235
+	end.z = 0.8 rel begin segment 235
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 236
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 236
+	end.y = 0 rel begin segment 236
+	end.z = 0.8 rel begin segment 236
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 237
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 237
+	end.y = 0 rel begin segment 237
+	end.z = 0.8 rel begin segment 237
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 238
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 238
+	end.y = 0 rel begin segment 238
+	end.z = 0.8 rel begin segment 238
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 239
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 239
+	end.y = 0 rel begin segment 239
+	end.z = 0.8 rel begin segment 239
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 240
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 240
+	end.y = 0 rel begin segment 240
+	end.z = 0.8 rel begin segment 240
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 241
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 241
+	end.y = 0 rel begin segment 241
+	end.z = 0.8 rel begin segment 241
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 242
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 242
+	end.y = 0 rel begin segment 242
+	end.z = 0.8 rel begin segment 242
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 243
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.6615060637
+	begin.width = 0.2314051647
+	end.x = 0 rel begin segment 243
+	end.y = 0 rel begin segment 243
+	end.z = 0.8 rel begin segment 243
+	end.height = 0.6615060637
+	end.width = 0.2314051647
+end segment
+
+segment 244
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.2033624907
+	begin.width = 0.4414076236
+	end.x = 0 rel begin segment 244
+	end.y = 0 rel begin segment 244
+	end.z = 0.8 rel begin segment 244
+	end.height = 0.2033624907
+	end.width = 0.4414076236
+end segment
+
+segment 245
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.6615060637
+	begin.width = 0.2314051647
+	end.x = 0 rel begin segment 245
+	end.y = 0 rel begin segment 245
+	end.z = 0.8 rel begin segment 245
+	end.height = 0.6615060637
+	end.width = 0.2314051647
+end segment
+
+segment 246
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 246
+	end.y = 0 rel begin segment 246
+	end.z = 0.8 rel begin segment 246
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 247
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 247
+	end.y = 0 rel begin segment 247
+	end.z = 0.8 rel begin segment 247
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 248
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 248
+	end.y = 0 rel begin segment 248
+	end.z = 0.8 rel begin segment 248
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 249
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 249
+	end.y = 0 rel begin segment 249
+	end.z = 0.8 rel begin segment 249
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 250
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 250
+	end.y = 0 rel begin segment 250
+	end.z = 0.8 rel begin segment 250
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 251
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 251
+	end.y = 0 rel begin segment 251
+	end.z = 0.8 rel begin segment 251
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 252
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 252
+	end.y = 0 rel begin segment 252
+	end.z = 0.8 rel begin segment 252
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 253
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 253
+	end.y = 0 rel begin segment 253
+	end.z = 0.8 rel begin segment 253
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 254
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 1
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 254
+	end.y = 0 rel begin segment 254
+	end.z = 0.8 rel begin segment 254
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 255
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 255
+	end.y = 0 rel begin segment 255
+	end.z = 0.8 rel begin segment 255
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 256
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 256
+	end.y = 0 rel begin segment 256
+	end.z = 0.8 rel begin segment 256
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 257
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 257
+	end.y = 0 rel begin segment 257
+	end.z = 0.8 rel begin segment 257
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 258
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 258
+	end.y = 0 rel begin segment 258
+	end.z = 0.8 rel begin segment 258
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 259
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 259
+	end.y = 0 rel begin segment 259
+	end.z = 0.8 rel begin segment 259
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 260
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 260
+	end.y = 0 rel begin segment 260
+	end.z = 0.8 rel begin segment 260
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 261
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 261
+	end.y = 0 rel begin segment 261
+	end.z = 0.8 rel begin segment 261
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 262
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 262
+	end.y = 0 rel begin segment 262
+	end.z = 0.8 rel begin segment 262
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 263
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.7329957991
+	begin.width = 0.7909484864
+	end.x = 0 rel begin segment 263
+	end.y = 0 rel begin segment 263
+	end.z = 0.8 rel begin segment 263
+	end.height = 0.7329957991
+	end.width = 0.7909484864
+end segment
+
+segment 264
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 264
+	end.y = 0 rel begin segment 264
+	end.z = 0.8 rel begin segment 264
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 265
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.4563757441
+	begin.width = 0.5470254378
+	end.x = 0 rel begin segment 265
+	end.y = 0 rel begin segment 265
+	end.z = 0.8 rel begin segment 265
+	end.height = 0.4563757441
+	end.width = 0.5470254378
+end segment
+
+segment 266
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.4160514693
+	begin.width = 0.5579400194
+	end.x = 0 rel begin segment 266
+	end.y = 0 rel begin segment 266
+	end.z = 0.8 rel begin segment 266
+	end.height = 0.4160514693
+	end.width = 0.5579400194
+end segment
+
+segment 267
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.7329957991
+	begin.width = 0.7909484864
+	end.x = 0 rel begin segment 267
+	end.y = 0 rel begin segment 267
+	end.z = 0.8 rel begin segment 267
+	end.height = 0.7329957991
+	end.width = 0.7909484864
+end segment
+
+segment 268
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 268
+	end.y = 0 rel begin segment 268
+	end.z = 0.8 rel begin segment 268
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 269
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 269
+	end.y = 0 rel begin segment 269
+	end.z = 0.8 rel begin segment 269
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 270
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 270
+	end.y = 0 rel begin segment 270
+	end.z = 0.8 rel begin segment 270
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 271
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 271
+	end.y = 0 rel begin segment 271
+	end.z = 0.8 rel begin segment 271
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 272
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 272
+	end.y = 0 rel begin segment 272
+	end.z = 0.8 rel begin segment 272
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 273
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 273
+	end.y = 0 rel begin segment 273
+	end.z = 0.8 rel begin segment 273
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 274
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 274
+	end.y = 0 rel begin segment 274
+	end.z = 0.8 rel begin segment 274
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 275
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 2
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 275
+	end.y = 0 rel begin segment 275
+	end.z = 0.8 rel begin segment 275
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 276
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 276
+	end.y = 0 rel begin segment 276
+	end.z = 0.8 rel begin segment 276
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 277
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 277
+	end.y = 0 rel begin segment 277
+	end.z = 0.8 rel begin segment 277
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 278
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 278
+	end.y = 0 rel begin segment 278
+	end.z = 0.8 rel begin segment 278
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 279
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 279
+	end.y = 0 rel begin segment 279
+	end.z = 0.8 rel begin segment 279
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 280
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 280
+	end.y = 0 rel begin segment 280
+	end.z = 0.8 rel begin segment 280
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 281
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 281
+	end.y = 0 rel begin segment 281
+	end.z = 0.8 rel begin segment 281
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 282
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 282
+	end.y = 0 rel begin segment 282
+	end.z = 0.8 rel begin segment 282
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 283
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2924548197
+	begin.width = 0.7757533561
+	end.x = 0 rel begin segment 283
+	end.y = 0 rel begin segment 283
+	end.z = 0.8 rel begin segment 283
+	end.height = 0.2924548197
+	end.width = 0.7757533561
+end segment
+
+segment 284
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 284
+	end.y = 0 rel begin segment 284
+	end.z = 0.8 rel begin segment 284
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 285
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 285
+	end.y = 0 rel begin segment 285
+	end.z = 0.8 rel begin segment 285
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 286
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.3700976444
+	begin.width = 0.4285825544
+	end.x = 0 rel begin segment 286
+	end.y = 0 rel begin segment 286
+	end.z = 0.8 rel begin segment 286
+	end.height = 0.3700976444
+	end.width = 0.4285825544
+end segment
+
+segment 287
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7159049873
+	begin.width = 0.3526569185
+	end.x = 0 rel begin segment 287
+	end.y = 0 rel begin segment 287
+	end.z = 0.8 rel begin segment 287
+	end.height = 0.7159049873
+	end.width = 0.3526569185
+end segment
+
+segment 288
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.3431294565
+	begin.width = 0.2697927452
+	end.x = 0 rel begin segment 288
+	end.y = 0 rel begin segment 288
+	end.z = 0.8 rel begin segment 288
+	end.height = 0.3431294565
+	end.width = 0.2697927452
+end segment
+
+segment 289
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2924548197
+	begin.width = 0.7757533561
+	end.x = 0 rel begin segment 289
+	end.y = 0 rel begin segment 289
+	end.z = 0.8 rel begin segment 289
+	end.height = 0.2924548197
+	end.width = 0.7757533561
+end segment
+
+segment 290
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 290
+	end.y = 0 rel begin segment 290
+	end.z = 0.8 rel begin segment 290
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 291
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 291
+	end.y = 0 rel begin segment 291
+	end.z = 0.8 rel begin segment 291
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 292
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 292
+	end.y = 0 rel begin segment 292
+	end.z = 0.8 rel begin segment 292
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 293
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 293
+	end.y = 0 rel begin segment 293
+	end.z = 0.8 rel begin segment 293
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 294
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 294
+	end.y = 0 rel begin segment 294
+	end.z = 0.8 rel begin segment 294
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 295
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 295
+	end.y = 0 rel begin segment 295
+	end.z = 0.8 rel begin segment 295
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 296
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 3
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 296
+	end.y = 0 rel begin segment 296
+	end.z = 0.8 rel begin segment 296
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 297
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 297
+	end.y = 0 rel begin segment 297
+	end.z = 0.8 rel begin segment 297
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 298
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 298
+	end.y = 0 rel begin segment 298
+	end.z = 0.8 rel begin segment 298
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 299
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 299
+	end.y = 0 rel begin segment 299
+	end.z = 0.8 rel begin segment 299
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 300
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 300
+	end.y = 0 rel begin segment 300
+	end.z = 0.8 rel begin segment 300
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 301
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 301
+	end.y = 0 rel begin segment 301
+	end.z = 0.8 rel begin segment 301
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 302
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 302
+	end.y = 0 rel begin segment 302
+	end.z = 0.8 rel begin segment 302
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 303
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.7910680539
+	begin.width = 0.5555518057
+	end.x = 0 rel begin segment 303
+	end.y = 0 rel begin segment 303
+	end.z = 0.8 rel begin segment 303
+	end.height = 0.7910680539
+	end.width = 0.5555518057
+end segment
+
+segment 304
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 304
+	end.y = 0 rel begin segment 304
+	end.z = 0.8 rel begin segment 304
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 305
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 305
+	end.y = 0 rel begin segment 305
+	end.z = 0.8 rel begin segment 305
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 306
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 306
+	end.y = 0 rel begin segment 306
+	end.z = 0.8 rel begin segment 306
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 307
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.4135428638
+	begin.width = 0.6653637911
+	end.x = 0 rel begin segment 307
+	end.y = 0 rel begin segment 307
+	end.z = 0.8 rel begin segment 307
+	end.height = 0.4135428638
+	end.width = 0.6653637911
+end segment
+
+segment 308
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.569491412
+	begin.width = 0.3909206191
+	end.x = 0 rel begin segment 308
+	end.y = 0 rel begin segment 308
+	end.z = 0.8 rel begin segment 308
+	end.height = 0.569491412
+	end.width = 0.3909206191
+end segment
+
+segment 309
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.2009967704
+	begin.width = 0.2227380336
+	end.x = 0 rel begin segment 309
+	end.y = 0 rel begin segment 309
+	end.z = 0.8 rel begin segment 309
+	end.height = 0.2009967704
+	end.width = 0.2227380336
+end segment
+
+segment 310
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 310
+	end.y = 0 rel begin segment 310
+	end.z = 0.8 rel begin segment 310
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 311
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.7910680539
+	begin.width = 0.5555518057
+	end.x = 0 rel begin segment 311
+	end.y = 0 rel begin segment 311
+	end.z = 0.8 rel begin segment 311
+	end.height = 0.7910680539
+	end.width = 0.5555518057
+end segment
+
+segment 312
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 312
+	end.y = 0 rel begin segment 312
+	end.z = 0.8 rel begin segment 312
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 313
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 313
+	end.y = 0 rel begin segment 313
+	end.z = 0.8 rel begin segment 313
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 314
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 314
+	end.y = 0 rel begin segment 314
+	end.z = 0.8 rel begin segment 314
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 315
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 315
+	end.y = 0 rel begin segment 315
+	end.z = 0.8 rel begin segment 315
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 316
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 316
+	end.y = 0 rel begin segment 316
+	end.z = 0.8 rel begin segment 316
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 317
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 4
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 317
+	end.y = 0 rel begin segment 317
+	end.z = 0.8 rel begin segment 317
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 318
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 318
+	end.y = 0 rel begin segment 318
+	end.z = 0.8 rel begin segment 318
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 319
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 319
+	end.y = 0 rel begin segment 319
+	end.z = 0.8 rel begin segment 319
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 320
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 320
+	end.y = 0 rel begin segment 320
+	end.z = 0.8 rel begin segment 320
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 321
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 321
+	end.y = 0 rel begin segment 321
+	end.z = 0.8 rel begin segment 321
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 322
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 322
+	end.y = 0 rel begin segment 322
+	end.z = 0.8 rel begin segment 322
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 323
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 323
+	end.y = 0 rel begin segment 323
+	end.z = 0.8 rel begin segment 323
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 324
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 324
+	end.y = 0 rel begin segment 324
+	end.z = 0.8 rel begin segment 324
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 325
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 325
+	end.y = 0 rel begin segment 325
+	end.z = 0.8 rel begin segment 325
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 326
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 326
+	end.y = 0 rel begin segment 326
+	end.z = 0.8 rel begin segment 326
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 327
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 327
+	end.y = 0 rel begin segment 327
+	end.z = 0.8 rel begin segment 327
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 328
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.2209174417
+	begin.width = 0.5307995248
+	end.x = 0 rel begin segment 328
+	end.y = 0 rel begin segment 328
+	end.z = 0.8 rel begin segment 328
+	end.height = 0.2209174417
+	end.width = 0.5307995248
+end segment
+
+segment 329
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4621600161
+	begin.width = 0.2019577909
+	end.x = 0 rel begin segment 329
+	end.y = 0 rel begin segment 329
+	end.z = 0.8 rel begin segment 329
+	end.height = 0.4621600161
+	end.width = 0.2019577909
+end segment
+
+segment 330
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4202980244
+	begin.width = 0.4748838705
+	end.x = 0 rel begin segment 330
+	end.y = 0 rel begin segment 330
+	end.z = 0.8 rel begin segment 330
+	end.height = 0.4202980244
+	end.width = 0.4748838705
+end segment
+
+segment 331
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.7623230549
+	begin.width = 0.3102828131
+	end.x = 0 rel begin segment 331
+	end.y = 0 rel begin segment 331
+	end.z = 0.8 rel begin segment 331
+	end.height = 0.7623230549
+	end.width = 0.3102828131
+end segment
+
+segment 332
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.6831373334
+	begin.width = 0.7099257454
+	end.x = 0 rel begin segment 332
+	end.y = 0 rel begin segment 332
+	end.z = 0.8 rel begin segment 332
+	end.height = 0.6831373334
+	end.width = 0.7099257454
+end segment
+
+segment 333
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 333
+	end.y = 0 rel begin segment 333
+	end.z = 0.8 rel begin segment 333
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 334
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 334
+	end.y = 0 rel begin segment 334
+	end.z = 0.8 rel begin segment 334
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 335
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 335
+	end.y = 0 rel begin segment 335
+	end.z = 0.8 rel begin segment 335
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 336
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 336
+	end.y = 0 rel begin segment 336
+	end.z = 0.8 rel begin segment 336
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 337
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 337
+	end.y = 0 rel begin segment 337
+	end.z = 0.8 rel begin segment 337
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 338
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 5
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 338
+	end.y = 0 rel begin segment 338
+	end.z = 0.8 rel begin segment 338
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 339
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 339
+	end.y = 0 rel begin segment 339
+	end.z = 0.8 rel begin segment 339
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 340
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 340
+	end.y = 0 rel begin segment 340
+	end.z = 0.8 rel begin segment 340
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 341
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 341
+	end.y = 0 rel begin segment 341
+	end.z = 0.8 rel begin segment 341
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 342
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 342
+	end.y = 0 rel begin segment 342
+	end.z = 0.8 rel begin segment 342
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 343
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2688279706
+	end.x = 0 rel begin segment 343
+	end.y = 0 rel begin segment 343
+	end.z = 0.8 rel begin segment 343
+	end.height = 0.2
+	end.width = 0.2688279706
+end segment
+
+segment 344
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 344
+	end.y = 0 rel begin segment 344
+	end.z = 0.8 rel begin segment 344
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 345
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 345
+	end.y = 0 rel begin segment 345
+	end.z = 0.8 rel begin segment 345
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 346
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 346
+	end.y = 0 rel begin segment 346
+	end.z = 0.8 rel begin segment 346
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 347
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 347
+	end.y = 0 rel begin segment 347
+	end.z = 0.8 rel begin segment 347
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 348
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 348
+	end.y = 0 rel begin segment 348
+	end.z = 0.8 rel begin segment 348
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 349
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.3701529738
+	begin.width = 0.2149699316
+	end.x = 0 rel begin segment 349
+	end.y = 0 rel begin segment 349
+	end.z = 0.8 rel begin segment 349
+	end.height = 0.3701529738
+	end.width = 0.2149699316
+end segment
+
+segment 350
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2518678007
+	end.x = 0 rel begin segment 350
+	end.y = 0 rel begin segment 350
+	end.z = 0.8 rel begin segment 350
+	end.height = 0.2
+	end.width = 0.2518678007
+end segment
+
+segment 351
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.5694177077
+	begin.width = 0.7958473245
+	end.x = 0 rel begin segment 351
+	end.y = 0 rel begin segment 351
+	end.z = 0.8 rel begin segment 351
+	end.height = 0.5694177077
+	end.width = 0.7958473245
+end segment
+
+segment 352
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.7352771506
+	begin.width = 0.3313568335
+	end.x = 0 rel begin segment 352
+	end.y = 0 rel begin segment 352
+	end.z = 0.8 rel begin segment 352
+	end.height = 0.7352771506
+	end.width = 0.3313568335
+end segment
+
+segment 353
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.5246120202
+	begin.width = 0.4022632624
+	end.x = 0 rel begin segment 353
+	end.y = 0 rel begin segment 353
+	end.z = 0.8 rel begin segment 353
+	end.height = 0.5246120202
+	end.width = 0.4022632624
+end segment
+
+segment 354
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.4033474158
+	begin.width = 0.7892807622
+	end.x = 0 rel begin segment 354
+	end.y = 0 rel begin segment 354
+	end.z = 0.8 rel begin segment 354
+	end.height = 0.4033474158
+	end.width = 0.7892807622
+end segment
+
+segment 355
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.2688279706
+	end.x = 0 rel begin segment 355
+	end.y = 0 rel begin segment 355
+	end.z = 0.8 rel begin segment 355
+	end.height = 0.2
+	end.width = 0.2688279706
+end segment
+
+segment 356
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 356
+	end.y = 0 rel begin segment 356
+	end.z = 0.8 rel begin segment 356
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 357
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 357
+	end.y = 0 rel begin segment 357
+	end.z = 0.8 rel begin segment 357
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 358
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 358
+	end.y = 0 rel begin segment 358
+	end.z = 0.8 rel begin segment 358
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 359
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 6
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 359
+	end.y = 0 rel begin segment 359
+	end.z = 0.8 rel begin segment 359
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 360
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 360
+	end.y = 0 rel begin segment 360
+	end.z = 0.8 rel begin segment 360
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 361
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 361
+	end.y = 0 rel begin segment 361
+	end.z = 0.8 rel begin segment 361
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 362
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 362
+	end.y = 0 rel begin segment 362
+	end.z = 0.8 rel begin segment 362
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 363
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.3852532708
+	begin.width = 0.4677989044
+	end.x = 0 rel begin segment 363
+	end.y = 0 rel begin segment 363
+	end.z = 0.8 rel begin segment 363
+	end.height = 0.3852532708
+	end.width = 0.4677989044
+end segment
+
+segment 364
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 364
+	end.y = 0 rel begin segment 364
+	end.z = 0.8 rel begin segment 364
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 365
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 365
+	end.y = 0 rel begin segment 365
+	end.z = 0.8 rel begin segment 365
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 366
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 366
+	end.y = 0 rel begin segment 366
+	end.z = 0.8 rel begin segment 366
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 367
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 367
+	end.y = 0 rel begin segment 367
+	end.z = 0.8 rel begin segment 367
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 368
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 368
+	end.y = 0 rel begin segment 368
+	end.z = 0.8 rel begin segment 368
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 369
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 369
+	end.y = 0 rel begin segment 369
+	end.z = 0.8 rel begin segment 369
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 370
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.4624076276
+	begin.width = 0.2
+	end.x = 0 rel begin segment 370
+	end.y = 0 rel begin segment 370
+	end.z = 0.8 rel begin segment 370
+	end.height = 0.4624076276
+	end.width = 0.2
+end segment
+
+segment 371
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.3657373035
+	begin.width = 0.6806977908
+	end.x = 0 rel begin segment 371
+	end.y = 0 rel begin segment 371
+	end.z = 0.8 rel begin segment 371
+	end.height = 0.3657373035
+	end.width = 0.6806977908
+end segment
+
+segment 372
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.389949756
+	begin.width = 0.6386917246
+	end.x = 0 rel begin segment 372
+	end.y = 0 rel begin segment 372
+	end.z = 0.8 rel begin segment 372
+	end.height = 0.389949756
+	end.width = 0.6386917246
+end segment
+
+segment 373
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2835961599
+	begin.width = 0.6521166707
+	end.x = 0 rel begin segment 373
+	end.y = 0 rel begin segment 373
+	end.z = 0.8 rel begin segment 373
+	end.height = 0.2835961599
+	end.width = 0.6521166707
+end segment
+
+segment 374
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 374
+	end.y = 0 rel begin segment 374
+	end.z = 0.8 rel begin segment 374
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 375
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.3079504701
+	begin.width = 0.7072555394
+	end.x = 0 rel begin segment 375
+	end.y = 0 rel begin segment 375
+	end.z = 0.8 rel begin segment 375
+	end.height = 0.3079504701
+	end.width = 0.7072555394
+end segment
+
+segment 376
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 376
+	end.y = 0 rel begin segment 376
+	end.z = 0.8 rel begin segment 376
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 377
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.3852532708
+	begin.width = 0.4677989044
+	end.x = 0 rel begin segment 377
+	end.y = 0 rel begin segment 377
+	end.z = 0.8 rel begin segment 377
+	end.height = 0.3852532708
+	end.width = 0.4677989044
+end segment
+
+segment 378
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 378
+	end.y = 0 rel begin segment 378
+	end.z = 0.8 rel begin segment 378
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 379
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 379
+	end.y = 0 rel begin segment 379
+	end.z = 0.8 rel begin segment 379
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 380
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 7
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 380
+	end.y = 0 rel begin segment 380
+	end.z = 0.8 rel begin segment 380
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 381
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 381
+	end.y = 0 rel begin segment 381
+	end.z = 0.8 rel begin segment 381
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 382
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 382
+	end.y = 0 rel begin segment 382
+	end.z = 0.8 rel begin segment 382
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 383
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6687341961
+	begin.width = 0.6379998292
+	end.x = 0 rel begin segment 383
+	end.y = 0 rel begin segment 383
+	end.z = 0.8 rel begin segment 383
+	end.height = 0.6687341961
+	end.width = 0.6379998292
+end segment
+
+segment 384
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 384
+	end.y = 0 rel begin segment 384
+	end.z = 0.8 rel begin segment 384
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 385
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 385
+	end.y = 0 rel begin segment 385
+	end.z = 0.8 rel begin segment 385
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 386
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 386
+	end.y = 0 rel begin segment 386
+	end.z = 0.8 rel begin segment 386
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 387
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 387
+	end.y = 0 rel begin segment 387
+	end.z = 0.8 rel begin segment 387
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 388
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 388
+	end.y = 0 rel begin segment 388
+	end.z = 0.8 rel begin segment 388
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 389
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 389
+	end.y = 0 rel begin segment 389
+	end.z = 0.8 rel begin segment 389
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 390
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 390
+	end.y = 0 rel begin segment 390
+	end.z = 0.8 rel begin segment 390
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 391
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6947619466
+	begin.width = 0.7986700945
+	end.x = 0 rel begin segment 391
+	end.y = 0 rel begin segment 391
+	end.z = 0.8 rel begin segment 391
+	end.height = 0.6947619466
+	end.width = 0.7986700945
+end segment
+
+segment 392
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.665341721
+	begin.width = 0.7279298924
+	end.x = 0 rel begin segment 392
+	end.y = 0 rel begin segment 392
+	end.z = 0.8 rel begin segment 392
+	end.height = 0.665341721
+	end.width = 0.7279298924
+end segment
+
+segment 393
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.7718779801
+	begin.width = 0.3054603776
+	end.x = 0 rel begin segment 393
+	end.y = 0 rel begin segment 393
+	end.z = 0.8 rel begin segment 393
+	end.height = 0.7718779801
+	end.width = 0.3054603776
+end segment
+
+segment 394
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.2453867595
+	begin.width = 0.2015991516
+	end.x = 0 rel begin segment 394
+	end.y = 0 rel begin segment 394
+	end.z = 0.8 rel begin segment 394
+	end.height = 0.2453867595
+	end.width = 0.2015991516
+end segment
+
+segment 395
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.4310215594
+	begin.width = 0.8
+	end.x = 0 rel begin segment 395
+	end.y = 0 rel begin segment 395
+	end.z = 0.8 rel begin segment 395
+	end.height = 0.4310215594
+	end.width = 0.8
+end segment
+
+segment 396
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6907700886
+	begin.width = 0.796823085
+	end.x = 0 rel begin segment 396
+	end.y = 0 rel begin segment 396
+	end.z = 0.8 rel begin segment 396
+	end.height = 0.6907700886
+	end.width = 0.796823085
+end segment
+
+segment 397
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 397
+	end.y = 0 rel begin segment 397
+	end.z = 0.8 rel begin segment 397
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 398
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6956312218
+	begin.width = 0.7316635463
+	end.x = 0 rel begin segment 398
+	end.y = 0 rel begin segment 398
+	end.z = 0.8 rel begin segment 398
+	end.height = 0.6956312218
+	end.width = 0.7316635463
+end segment
+
+segment 399
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.6687341961
+	begin.width = 0.6379998292
+	end.x = 0 rel begin segment 399
+	end.y = 0 rel begin segment 399
+	end.z = 0.8 rel begin segment 399
+	end.height = 0.6687341961
+	end.width = 0.6379998292
+end segment
+
+segment 400
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 400
+	end.y = 0 rel begin segment 400
+	end.z = 0.8 rel begin segment 400
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 401
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 8
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 401
+	end.y = 0 rel begin segment 401
+	end.z = 0.8 rel begin segment 401
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 402
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 402
+	end.y = 0 rel begin segment 402
+	end.z = 0.8 rel begin segment 402
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 403
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.568415545
+	begin.width = 0.8
+	end.x = 0 rel begin segment 403
+	end.y = 0 rel begin segment 403
+	end.z = 0.8 rel begin segment 403
+	end.height = 0.568415545
+	end.width = 0.8
+end segment
+
+segment 404
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 404
+	end.y = 0 rel begin segment 404
+	end.z = 0.8 rel begin segment 404
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 405
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 405
+	end.y = 0 rel begin segment 405
+	end.z = 0.8 rel begin segment 405
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 406
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 406
+	end.y = 0 rel begin segment 406
+	end.z = 0.8 rel begin segment 406
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 407
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 407
+	end.y = 0 rel begin segment 407
+	end.z = 0.8 rel begin segment 407
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 408
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 408
+	end.y = 0 rel begin segment 408
+	end.z = 0.8 rel begin segment 408
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 409
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 409
+	end.y = 0 rel begin segment 409
+	end.z = 0.8 rel begin segment 409
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 410
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 410
+	end.y = 0 rel begin segment 410
+	end.z = 0.8 rel begin segment 410
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 411
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 411
+	end.y = 0 rel begin segment 411
+	end.z = 0.8 rel begin segment 411
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 412
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2
+	begin.width = 0.7477017237
+	end.x = 0 rel begin segment 412
+	end.y = 0 rel begin segment 412
+	end.z = 0.8 rel begin segment 412
+	end.height = 0.2
+	end.width = 0.7477017237
+end segment
+
+segment 413
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.7066661542
+	begin.width = 0.285814159
+	end.x = 0 rel begin segment 413
+	end.y = 0 rel begin segment 413
+	end.z = 0.8 rel begin segment 413
+	end.height = 0.7066661542
+	end.width = 0.285814159
+end segment
+
+segment 414
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2373704425
+	begin.width = 0.5214797293
+	end.x = 0 rel begin segment 414
+	end.y = 0 rel begin segment 414
+	end.z = 0.8 rel begin segment 414
+	end.height = 0.2373704425
+	end.width = 0.5214797293
+end segment
+
+segment 415
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.7992429389
+	begin.width = 0.4655072393
+	end.x = 0 rel begin segment 415
+	end.y = 0 rel begin segment 415
+	end.z = 0.8 rel begin segment 415
+	end.height = 0.7992429389
+	end.width = 0.4655072393
+end segment
+
+segment 416
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.5513819561
+	begin.width = 0.2516468002
+	end.x = 0 rel begin segment 416
+	end.y = 0 rel begin segment 416
+	end.z = 0.8 rel begin segment 416
+	end.height = 0.5513819561
+	end.width = 0.2516468002
+end segment
+
+segment 417
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.3721565972
+	begin.width = 0.3594805308
+	end.x = 0 rel begin segment 417
+	end.y = 0 rel begin segment 417
+	end.z = 0.8 rel begin segment 417
+	end.height = 0.3721565972
+	end.width = 0.3594805308
+end segment
+
+segment 418
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.3375204489
+	begin.width = 0.6814005274
+	end.x = 0 rel begin segment 418
+	end.y = 0 rel begin segment 418
+	end.z = 0.8 rel begin segment 418
+	end.height = 0.3375204489
+	end.width = 0.6814005274
+end segment
+
+segment 419
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2783552973
+	begin.width = 0.7010951853
+	end.x = 0 rel begin segment 419
+	end.y = 0 rel begin segment 419
+	end.z = 0.8 rel begin segment 419
+	end.height = 0.2783552973
+	end.width = 0.7010951853
+end segment
+
+segment 420
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.2051484795
+	begin.width = 0.6910280977
+	end.x = 0 rel begin segment 420
+	end.y = 0 rel begin segment 420
+	end.z = 0.8 rel begin segment 420
+	end.height = 0.2051484795
+	end.width = 0.6910280977
+end segment
+
+segment 421
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.568415545
+	begin.width = 0.8
+	end.x = 0 rel begin segment 421
+	end.y = 0 rel begin segment 421
+	end.z = 0.8 rel begin segment 421
+	end.height = 0.568415545
+	end.width = 0.8
+end segment
+
+segment 422
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 9
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 422
+	end.y = 0 rel begin segment 422
+	end.z = 0.8 rel begin segment 422
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 423
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -10
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.709441121
+	begin.width = 0.2015502813
+	end.x = 0 rel begin segment 423
+	end.y = 0 rel begin segment 423
+	end.z = 0.8 rel begin segment 423
+	end.height = 0.709441121
+	end.width = 0.2015502813
+end segment
+
+segment 424
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -9
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 424
+	end.y = 0 rel begin segment 424
+	end.z = 0.8 rel begin segment 424
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 425
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -8
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 425
+	end.y = 0 rel begin segment 425
+	end.z = 0.8 rel begin segment 425
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 426
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -7
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 426
+	end.y = 0 rel begin segment 426
+	end.z = 0.8 rel begin segment 426
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 427
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -6
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 427
+	end.y = 0 rel begin segment 427
+	end.z = 0.8 rel begin segment 427
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 428
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -5
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 428
+	end.y = 0 rel begin segment 428
+	end.z = 0.8 rel begin segment 428
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 429
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -4
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 429
+	end.y = 0 rel begin segment 429
+	end.z = 0.8 rel begin segment 429
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 430
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -3
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 430
+	end.y = 0 rel begin segment 430
+	end.z = 0.8 rel begin segment 430
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 431
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -2
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 431
+	end.y = 0 rel begin segment 431
+	end.z = 0.8 rel begin segment 431
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 432
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = -1
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 432
+	end.y = 0 rel begin segment 432
+	end.z = 0.8 rel begin segment 432
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 433
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 0
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.4020417654
+	begin.width = 0.5595247266
+	end.x = 0 rel begin segment 433
+	end.y = 0 rel begin segment 433
+	end.z = 0.8 rel begin segment 433
+	end.height = 0.4020417654
+	end.width = 0.5595247266
+end segment
+
+segment 434
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 1
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.3821475468
+	begin.width = 0.6429932757
+	end.x = 0 rel begin segment 434
+	end.y = 0 rel begin segment 434
+	end.z = 0.8 rel begin segment 434
+	end.height = 0.3821475468
+	end.width = 0.6429932757
+end segment
+
+segment 435
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 2
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.7182777349
+	begin.width = 0.3538832724
+	end.x = 0 rel begin segment 435
+	end.y = 0 rel begin segment 435
+	end.z = 0.8 rel begin segment 435
+	end.height = 0.7182777349
+	end.width = 0.3538832724
+end segment
+
+segment 436
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 3
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.2623849288
+	begin.width = 0.2
+	end.x = 0 rel begin segment 436
+	end.y = 0 rel begin segment 436
+	end.z = 0.8 rel begin segment 436
+	end.height = 0.2623849288
+	end.width = 0.2
+end segment
+
+segment 437
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 4
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.6541467916
+	begin.width = 0.6489054636
+	end.x = 0 rel begin segment 437
+	end.y = 0 rel begin segment 437
+	end.z = 0.8 rel begin segment 437
+	end.height = 0.6541467916
+	end.width = 0.6489054636
+end segment
+
+segment 438
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 5
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.4768581822
+	begin.width = 0.7550604632
+	end.x = 0 rel begin segment 438
+	end.y = 0 rel begin segment 438
+	end.z = 0.8 rel begin segment 438
+	end.height = 0.4768581822
+	end.width = 0.7550604632
+end segment
+
+segment 439
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 6
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.4266442961
+	begin.width = 0.4870659156
+	end.x = 0 rel begin segment 439
+	end.y = 0 rel begin segment 439
+	end.z = 0.8 rel begin segment 439
+	end.height = 0.4266442961
+	end.width = 0.4870659156
+end segment
+
+segment 440
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 7
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.2010128012
+	begin.width = 0.5191201494
+	end.x = 0 rel begin segment 440
+	end.y = 0 rel begin segment 440
+	end.z = 0.8 rel begin segment 440
+	end.height = 0.2010128012
+	end.width = 0.5191201494
+end segment
+
+segment 441
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 8
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.7356397546
+	begin.width = 0.4126009528
+	end.x = 0 rel begin segment 441
+	end.y = 0 rel begin segment 441
+	end.z = 0.8 rel begin segment 441
+	end.height = 0.7356397546
+	end.width = 0.4126009528
+end segment
+
+segment 442
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 9
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.3106143951
+	begin.width = 0.3694146696
+	end.x = 0 rel begin segment 442
+	end.y = 0 rel begin segment 442
+	end.z = 0.8 rel begin segment 442
+	end.height = 0.3106143951
+	end.width = 0.3694146696
+end segment
+
+segment 443
+	structure = STRUCT_CHANNEL
+	extended = 1
+	begin.x = 10
+	begin.y = 10
+	begin.z = 0.1
+	begin.height = 0.709441121
+	begin.width = 0.2015502813
+	end.x = 0 rel begin segment 443
+	end.y = 0 rel begin segment 443
+	end.z = 0.8 rel begin segment 443
+	end.height = 0.709441121
+	end.width = 0.2015502813
+end segment
+
+
+
+
+launch_field 1
+	launch_pathway = 0
+	launch_type = LAUNCH_PLANEWAVE
+	launch_tilt = 1
+	launch_align_file = 1
+	launch_angle = 0
+	launch_theta = 0
+end launch_field
+
+
