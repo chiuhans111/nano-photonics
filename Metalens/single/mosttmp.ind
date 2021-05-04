@@ -33,8 +33,10 @@ lambda = free_space_wavelength
 launch_align_file = 1
 launch_tilt = 1
 most_prefix = mosttmp
-rcwa_harmonics_x = 5
-rcwa_harmonics_y = 5
+rcwa_harmonics_x = 7
+rcwa_harmonics_y = 7
+rcwa_output_diff_trans = 1
+rcwa_output_option = 1
 sim_tool = ST_DIFFRACTMOD
 structure = STRUCT_CHANNEL
 width = 1
@@ -123,6 +125,7 @@ IV_Declarations
 IV_InitialValues
 
 [MEASUREMENTS:ST_DIFFRACTMOD]
+STANDARD dm_de_t_0_0_single Y 
 STANDARD dm_m2_ex Y 
 
 [METRICS]
