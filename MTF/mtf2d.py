@@ -108,7 +108,7 @@ def circle(x, y, radius):
 # -----------------------------------------------------------------------------
 
 resolution = 701
-mon_resolution = 256
+mon_resolution = 64
 
 lens_radius = 10.5
 focal_length = 18.65
@@ -121,6 +121,7 @@ airy_radius = 1.22 * wavelength * diagonal / lens_radius / 2
 cutoff_frequency = 2 * numerical_aperture / wavelength
 
 mon_radius = airy_radius/6*mon_resolution
+# mon_radius = 10
 
 print("\n"*5)
 print("INFORMATIONS-----------------")
@@ -146,6 +147,8 @@ metalens_field = phasemask.get_im("./fwtmp_m1_f2_ex.dat", True)
 metalens_field = tf.cast(metalens_field, tf.dtypes.complex64)
 
 plt.imshow(np.angle(metalens_field))
+plt.show()
+plt.imshow(np.abs(metalens_field))
 plt.show()
 # START SIMULATE
 

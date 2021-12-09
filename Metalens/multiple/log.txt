@@ -719,3 +719,221 @@ ank 5: FDTD actual memory usage: 0 + 0 (base) = 0 MB
 
 Converged at L=2912.  New NT=2952, Stop Time = 50.7375.
 Actual Computation Time = 5.007 min (WALL = 5.007)
+spawning cmd=fwmpirun fwtmp.ind!
+spawning cmd=mpiexec -np 20 -localroot -env RSLM_SERVER 114.32.66.226 -env I_MPI_PIN_DOMAIN socket -env I_MPI_WAIT_MODE 1 -noprompt -wdir E:\Documents\Github\nano-photonics\Metalens\multiple C:\Synopsys\PhotonicSolutions\2020.09\RSoft\bin\fullwave.exe fwtmp.ind fdtd_usefloat=1 cliq_file=cliques_58360.txt rsoft_completion_file=done_58360.txt >mpiexeclog.txt!
+Rank 2: MPI_Init Called, NumProcs=20, mypid=76520.
+Rank 14: MPI_Init Called, NumProcs=20, mypid=71272.
+Rank 19: MPI_Init Called, NumProcs=20, mypid=69860.
+Rank 9: MPI_Init Called, NumProcs=20, mypid=78860.
+Rank 17: MPI_Init Called, NumProcs=20, mypid=84464.
+Rank 11: MPI_Init Called, NumProcs=20, mypid=4988.
+Rank 0: MPI_Init Called, NumProcs=20, mypid=56228.
+Rank 8: MPI_Init Called, NumProcs=20, mypid=75952.
+Rank 12: MPI_Init Called, NumProcs=20, mypid=84968.
+Rank 6: MPI_Init Called, NumProcs=20, mypid=77124.
+Rank 4: MPI_Init Called, NumProcs=20, mypid=2032.
+Rank 18: MPI_Init Called, NumProcs=20, mypid=86720.
+Rank 15: MPI_Init Called, NumProcs=20, mypid=12496.
+Rank 13: MPI_Init Called, NumProcs=20, mypid=80964.
+Rank 10: MPI_Init Called, NumProcs=20, mypid=79016.
+Rank 7: MPI_Init Called, NumProcs=20, mypid=75276.
+Rank 1: MPI_Init Called, NumProcs=20, mypid=76996.
+Rank 16: MPI_Init Called, NumProcs=20, mypid=75180.
+Rank 3: MPI_Init Called, NumProcs=20, mypid=86488.
+My Rank is 14.
+My Rank is 19.
+My Rank is 5.
+My Rank is 7.
+My Rank is 6.
+My Rank is 12.
+My Rank is 16.
+My Rank is 10.
+My Rank is 17.
+My Rank is 18.
+My Rank is 13.
+My Rank is 3.
+My Rank is 8.
+My Rank is 4.
+My Rank is 2.
+My Rank is 9.
+My Rank is 15.
+Using MPI Enabled Code
+NumProcs is 20.
+My Rank is 0.
+Rank 11: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 19: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 5: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 14: FDTD estimated simulation memory usage: 47.5027 MB
+FDTD Auto Time Step = 0.0171875, Stability Limit = 0.0173205
+Rank 6: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 7: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 12: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 10: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 16: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 17: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 18: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 3: FDTD estimated simulation memory usage: 47.5027 MB
+FDTD grid info: NX=362 NY=362 NZ=91, NT=2540
+Rank 4: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 13: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 8: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 9: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 1: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 2: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 0: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 15: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 0: Rank in X cut dir 0: NX=15
+Rank 0: Rank in X cut dir 1: NX=20
+Rank 0: Rank in X cut dir 2: NX=20
+Rank 0: Rank in X cut dir 3: NX=19
+Rank 0: Rank in X cut dir 4: NX=19
+Rank 0: Rank in X cut dir 5: NX=19
+Rank 0: Rank in X cut dir 6: NX=19
+Rank 0: Rank in X cut dir 7: NX=19
+Rank 0: Rank in X cut dir 8: NX=19
+Rank 0: Rank in X cut dir 9: NX=19
+Rank 0: Rank in X cut dir 10: NX=19
+Rank 0: Rank in X cut dir 11: NX=19
+Rank 0: Rank in X cut dir 12: NX=19
+Rank 0: Rank in X cut dir 13: NX=19
+Rank 0: Rank in X cut dir 14: NX=19
+Rank 0: Rank in X cut dir 15: NX=19
+Rank 0: Rank in X cut dir 16: NX=19
+Rank 0: Rank in X cut dir 17: NX=20
+Rank 0: Rank in X cut dir 18: NX=20
+Rank 0: Rank in X cut dir 19: NX=20
+Rank 17: FDTD estimated monitor memory usage: 0.002552 MB
+Rank 6: FDTD estimated monitor memory usage: 0.002552 MB
+
+Rank 9: FDTD estimated monitor memory usage: 0.002552 MB
+Rank 12: FDTD estimated monitor memory usage: 0.002552 MB
+Rank 3: FDTD estimated monitor memory usage: 0.002552 MB
+
+Rank 2: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 11: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 17: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 0: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+
+Rank 6: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 7: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+
+Rank 9: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 15: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 14: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 10: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 5: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 8: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+
+Rank 3: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+
+Converged at L=2912.  New NT=2952, Stop Time = 50.7375.
+Actual Computation Time = 4.960 min (WALL = 4.960)
+spawning cmd=fwmpirun fwtmp.ind!
+spawning cmd=mpiexec -np 20 -localroot -env RSLM_SERVER 114.32.66.226 -env I_MPI_PIN_DOMAIN socket -env I_MPI_WAIT_MODE 1 -noprompt -wdir E:\Documents\Github\nano-photonics\Metalens\multiple C:\Synopsys\PhotonicSolutions\2020.09\RSoft\bin\fullwave.exe fwtmp.ind fdtd_usefloat=1 cliq_file=cliques_16856.txt rsoft_completion_file=done_16856.txt >mpiexeclog.txt!
+Rank 12: MPI_Init Called, NumProcs=20, mypid=75544.
+Rank 8: MPI_Init Called, NumProcs=20, mypid=1820.
+Rank 9: MPI_Init Called, NumProcs=20, mypid=52820.
+Rank 4: MPI_Init Called, NumProcs=20, mypid=85472.
+Rank 16: MPI_Init Called, NumProcs=20, mypid=19132.
+Rank 13: MPI_Init Called, NumProcs=20, mypid=69416.
+Rank 7: MPI_Init Called, NumProcs=20, mypid=63764.
+Rank 1: MPI_Init Called, NumProcs=20, mypid=17948.
+Rank 19: MPI_Init Called, NumProcs=20, mypid=38608.
+Rank 2: MPI_Init Called, NumProcs=20, mypid=50992.
+Rank 10: MPI_Init Called, NumProcs=20, mypid=82712.
+Rank 6: MPI_Init Called, NumProcs=20, mypid=78672.
+Rank 17: MPI_Init Called, NumProcs=20, mypid=23108.
+Rank 18: MPI_Init Called, NumProcs=20, mypid=25956.
+Rank 11: MPI_Init Called, NumProcs=20, mypid=39544.
+Rank 3: MPI_Init Called, NumProcs=20, mypid=30176.
+Rank 15: MPI_Init Called, NumProcs=20, mypid=19364.
+Rank 14: MPI_Init Called, NumProcs=20, mypid=58940.
+Rank 5: MPI_Init Called, NumProcs=20, mypid=68396.
+Rank 0: MPI_Init Called, NumProcs=20, mypid=24284.
+My Rank is 8.
+My Rank is 6.
+My Rank is 1.
+My Rank is 10.
+My Rank is 4.
+My Rank is 14.
+My Rank is 12.
+My Rank is 11.
+My Rank is 16.
+My Rank is 2.
+My Rank is 17.
+My Rank is 3.
+
+My Rank is 18.
+My Rank is 13.
+My Rank is 5.
+My Rank is 9.
+My Rank is 19.
+My Rank is 7.
+Using MPI Enabled Code
+NumProcs is 20.
+My Rank is 0.
+Rank 8: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 6: FDTD estimated simulation memory usage: 47.5027 MB
+FDTD Auto Time Step = 0.0171875, Stability Limit = 0.0173205
+Rank 1: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 10: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 4: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 14: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 15: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 12: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 16: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 17: FDTD estimated simulation memory usage: 47.5027 MB
+FDTD grid info: NX=362 NY=362 NZ=91, NT=2540
+Rank 11: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 13: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 3: FDTD estimated simulation memory usage: 47.5027 MB
+
+Rank 2: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 5: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 19: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 9: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 7: FDTD estimated simulation memory usage: 47.5027 MB
+Rank 0: Rank in X cut dir 0: NX=15
+Rank 0: Rank in X cut dir 1: NX=20
+Rank 0: Rank in X cut dir 2: NX=20
+Rank 0: Rank in X cut dir 3: NX=19
+Rank 0: Rank in X cut dir 4: NX=19
+Rank 0: Rank in X cut dir 5: NX=19
+Rank 0: Rank in X cut dir 6: NX=19
+Rank 0: Rank in X cut dir 7: NX=19
+Rank 0: Rank in X cut dir 8: NX=19
+Rank 0: Rank in X cut dir 9: NX=19
+Rank 0: Rank in X cut dir 10: NX=19
+Rank 0: Rank in X cut dir 11: NX=19
+Rank 0: Rank in X cut dir 12: NX=19
+Rank 0: Rank in X cut dir 13: NX=19
+Rank 0: Rank in X cut dir 14: NX=19
+Rank 0: Rank in X cut dir 15: NX=19
+Rank 0: Rank in X cut dir 16: NX=19
+Rank 0: Rank in X cut dir 17: NX=20
+Rank 0: Rank in X cut dir 18: NX=20
+Rank 0: Rank in X cut dir 19: NX=20
+Rank 0: FDTD estimated monitor memory usage: 94.0084 MB
+
+Rank 2: FDTD estimated monitor memory usage: 0.002552 MB
+Rank 1: FDTD estimated monitor memory usage: 0.002552 MB
+
+Rank 15: FDTD estimated monitor memory usage: 0.002552 MB
+Rank 10: FDTD estimated monitor memory usage: 0.002552 MB
+Rank 18: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 6: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+
+Rank 19: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 0: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 17: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 1: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 4: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 13: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 8: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 5: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 14: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+ank 15: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 10: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Rank 12: FDTD actual memory usage: 0 + 0 (base) = 0 MB
+Converged at L=2560.  New NT=2600, Stop Time = 44.6875.
+Actual Computation Time = 4.428 min (WALL = 4.428)

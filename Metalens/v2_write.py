@@ -17,7 +17,7 @@ TALL = []
 #             H.append(h)
 #             TALL.append(tall)
 
-n = 20
+n = 50
 for w in np.linspace(0.2, 0.8, n):
     for h in np.linspace(0.2, 0.8, n):
         W.append(w)

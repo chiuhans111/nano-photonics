@@ -1,2 +1,2 @@
 Monitor Results:
-	Mon#1 |Ex| =  1.110800E+00
+	Mon#1 |Ex| =  9.677484E-01

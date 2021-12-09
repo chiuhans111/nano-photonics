@@ -11,22 +11,29 @@ BUILD_LENS = True
 
 # MOST RESULT ------------------------------------------------
 variables = get_variable("./single/search_range.txt")
-results = get_result("./single/mosttmp_work")["mosttmp_dm_m2_ex"]
+results = get_result("./single/mosttmp_work")
 
 print(variables)
-print(results.shape)
 
 W = variables["W"]
 H = variables["H"]
 
 # PERIOD = variables["PERIOD"]
-er = results[:, 0]
-ei = results[:, 1]
+er = results["mosttmp_dm_m2_ex"][:, 0]
+ei = results["mosttmp_dm_m2_ex"][:, 1]
+E = results["mosttmp_dm_de_t_0_0_single"][:, 0]
+
 e = er+1j*ei
 P = np.angle(e)
 A = np.abs(e)
-if False:
-    plt.scatter(W, H, c=np.angle(er+1j*ei))
+
+if True:
+    plt.subplot(131)
+    plt.scatter(W, H, c=E)
+    plt.subplot(132)
+    plt.scatter(W*H, P,  c=E)
+    plt.subplot(133)
+    plt.scatter(W*H, A,  c=E)
     plt.show()
 
 
@@ -37,20 +44,20 @@ def get_model():
     x = input_layer
     x = tf.concat([x, x[:, :1]*x[:, 1:]], 1)
 
+    x = tf.keras.layers.Dense(8, activation='sigmoid')(x)
     x = tf.keras.layers.Dense(16, activation='sigmoid')(x)
     x = tf.keras.layers.Dense(32, activation='sigmoid')(x)
-    x = tf.keras.layers.Dense(16, activation='sigmoid')(x)
+    x = tf.keras.layers.Dense(32, activation='sigmoid')(x)
     x = tf.keras.layers.Dropout(0.1)(x)
-    x = tf.keras.layers.Dense(8, activation='sigmoid')(x)
-    x = tf.keras.layers.Dense(2)(x)
+    x = tf.keras.layers.Dense(3)(x)
     return tf.keras.Model(input_layer, x)
 
 
 train_x = tf.stack([W, H], 1)
-train_y = tf.stack([er, ei], 1)
+train_y = tf.stack([er, ei, E], 1)
 
 model = get_model()
-adam = tf.keras.optimizers.Adam(lr=0.002)
+adam = tf.keras.optimizers.Adam(lr=0.01)
 model.compile(adam, 'mse')
 
 
@@ -74,14 +81,18 @@ if TRAIN_BASE_MODEL:
         model.save("./models/model.h5")
         model.save("./models/model_backup.h5")
         test_y = model(test_x)
-        result = np.reshape(test_y, list(Ws.shape) + [2])
+        result = np.reshape(test_y, list(Ws.shape) + [3])
         r = result[::-1, :, 0]+1j*result[::-1, :, 1]
+
         plt.clf()
-        plt.subplot(121)
+        plt.subplot(221)
         plt.imshow(np.angle(r),
                    extent=[min(W), max(W), min(H), max(H)])
-        plt.subplot(122)
+        plt.subplot(222)
         plt.imshow(np.abs(r),
+                   extent=[min(W), max(W), min(H), max(H)])
+        plt.subplot(223)
+        plt.imshow(result[::-1, :, 2],
                    extent=[min(W), max(W), min(H), max(H)])
         plt.pause(0.01)
     plt.show()
@@ -118,14 +129,16 @@ if BUILD_LENS:
 
     @tf.function
     def evaluate(selected):
-        e = tf.cast(model(selected), tf.dtypes.complex64)
+        predict = model(selected)
+        e = tf.cast(predict[:, :2], tf.dtypes.complex64)
         phasor = (e[:, 0] + 1j*e[:, 1])
+        efficiency = tf.reduce_sum(predict[:, 2]*weight_sum)/weight_sum
         phasor_signal = phasor * P_phasor
         background = tf.reduce_sum(phasor*weight)/weight_sum
         integrated = tf.reduce_sum(phasor_signal*weight)/weight_sum
         noise = tf.abs(background)
         signal = tf.abs(integrated)
-        return signal/(noise+1)
+        return signal*(efficiency+1)/(noise+1)
 
     NP = 100
 
@@ -147,8 +160,8 @@ if BUILD_LENS:
                 H[best]
             ])
 
-        population.append(np.array(selected))
-        # population.append(np.random.rand(P_targets.shape[0], 2)*0.6+0.2)
+        # population.append(np.array(selected))
+        population.append(np.random.rand(P_targets.shape[0], 2)*0.6+0.2)
 
     last_score = []
     for iterations in range(1000):
@@ -266,5 +279,5 @@ if BUILD_LENS:
     for i, segment in enumerate(segments):
         text += "\n\n"+make_segment(i+2, *segment)
 
-    with open("./multiple/multiplerect_2.ind", 'w') as f:
+    with open("./multiple/multiplerect_3.ind", 'w') as f:
         f.write(text)

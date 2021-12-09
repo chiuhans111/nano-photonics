@@ -1,0 +1,118 @@
+SEE 0
+LEN NEW
+GBL NUM ^CV_BACKEND_STARTUP_SEQUENCE; ^CV_BACKEND_STARTUP_SEQUENCE == 1
+RES "E:\Documents\Github\nano-photonics\MTF\codev\metalens_mtf.len"
+VIE; CAN;
+VIE
+GO
+VIE; CAN;
+VIE
+SSI  0
+RAT DEF;GRD REC 1 51
+GO
+PSF; CAN;
+PSF
+GO
+FAB2; CAN;
+FAB
+DIS INT S1
+LEV INC 0
+GO
+FAB
+DIS INT S1
+LEV INC 0
+GO
+MTF; CAN;
+MTF
+GEO NO
+CHT FRE  Y
+GO
+MTF; CAN;
+MTF
+GEO NO
+NRD  100
+CHT FRE  Y
+GO
+MTF; CAN;
+MTF
+GEO NO
+NRD  1000
+CHT FRE  Y
+GO
+MTF; CAN;
+MTF
+GEO NO
+NRD  5000
+CHT FRE  Y
+GO
+MTF; CAN;
+MTF
+GEO NO
+NRD  2000
+CHT FRE  Y
+GO
+MTF; CAN;
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+GO
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+RSF  S1   Yes;RPX  S1   100;RPY  S1   100;ROX  S1   0;ROY  S1   0;RWX  S1   1;RWY  S1   1
+GO
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+RSF  S1   Yes;RPX  S1   500;RPY  S1   500;ROX  S1   0;ROY  S1   0;RWX  S1   1;RWY  S1   1
+GO
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+RSF  S1   Yes;RPX  S1   500;RPY  S1   500;ROX  S1   0;ROY  S1   0;RWX  S1   1;RWY  S1   1
+GPX  SO..I   201;GPY  SO..I   201;GOX  SO..I   0;GOY  SO..I   0;GWX  SO..I   0.02;GWY  SO..I   0.02
+GO
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+RSF  S1   Yes;RPX  S1   1000;RPY  S1   1000;ROX  S1   0;ROY  S1   0;RWX  S1   1;RWY  S1   1
+GPX  SO..I   201;GPY  SO..I   201;GOX  SO..I   0;GOY  SO..I   0;GWX  SO..I   0.02;GWY  SO..I   0.02
+GO
+BSP; CAN;
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq";GO
+run "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq";GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 1024 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 1024 0 N N "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 N N "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+GO
+BSP; CAN;
+BSP; CAN;
+BSP
+CHT INT  SI    Yes
+GO
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 N N "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 Y Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+RUN "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 512 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq"
+run "C:\CODEV112_SR1\macro\fft2dmtf.seq" 128 PLO 1 2 0 ;GO
+run "C:\CODEV112_SR1\macro\fft2dmtf.seq" 128 PLO 1 2 0 ;GO
+run "C:\CODEV112_SR1\macro\fft2dmtf.seq" 128 DIS 1 2 0 ;GO
+RUN "C:\CODEV112_SR1\macro\fft2dmtf.seq" 128 CON 1 2 0
+RUN "C:\CODEV112_SR1\macro\fft2dmtf.seq" 512 PLO 1 2 0
+RUN "C:\CODEV112_SR1\macro\fft2dmtf.seq" 512 PLO 1 2 0
+RUN "C:\CODEV112_SR1\macro\fft2dmtf.seq" 512 PLO 1 2 0
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\fft2dmtf.seq" 128 PLO 1 2 0 ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
+run "C:\CODEV112_SR1\macro\mtf_from_bsp.seq" 128 0 N Y "E:\Documents\Github\nano-photonics\MTF\codev\bsp.seq" ;GO
